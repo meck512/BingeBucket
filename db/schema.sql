@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS binge_bucket;
+DROP DATABASE IF EXISTS  binge_bucket_db;
 
-CREATE DATABASE binge_bucket;
-
-USE binge_bucket;
+CREATE DATABASE  binge_bucket_db;
