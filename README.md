@@ -1,9 +1,9 @@
 # BingeBucket
-  ![Badge for GitHub](https://img.shields.io/github/languages/top/Mason021/BingeBucket?style=flat&logo=appveyor) 
+  ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg) 
   
   
   ## Description 
-  Allows users to sort through many shows on Netflix, archive their favorites and see other user ratings.
+  Allows users to sort through many shows on Netflix, archive their favorites, and see other users ratings.
   
   
   ## Table of Contents
@@ -45,9 +45,9 @@
 
   [@KevinPMyers](https://github.com/KevinPMyers)
 
-  [awolrob](https://github.com/awolrob)
+  [@awolrob](https://github.com/awolrob)
 
-  [Chubbsdaweb](https://github.com/Chubbsdaweb)
+  [@Chubbsdaweb](https://github.com/Chubbsdaweb)
   
-  [@Mason021](https://api.github.com/users/Mason021)
+  [@Mason021](https://github.com/Mason021)
   
