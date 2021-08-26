@@ -1,7 +1,5 @@
 // Once we decide what info we want from the api we will have to add things like movie poster, actors, imbd rating etc.
 
-
-
 Feature.init(
     {
       id: {
