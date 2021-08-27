@@ -1,7 +1,5 @@
 // Once we decide what info we want from the api we will have to add things like movie poster, actors, imbd rating etc.
 
-
-
 Feature.init(
     {
       id: {
@@ -13,6 +11,15 @@ Feature.init(
       title: {
         type: DataTypes.STRING,
         allowNull: false
+      },
+      cover_photo: {
+        type: DataTypes.STRING, 
+      },
+      cast: {
+        type: DataTypes.ARRAY, 
+      },
+      description: {
+        type: DataTypes.STRING,
       },
       feature_url: {
         type: DataTypes.STRING,
