@@ -33,6 +33,12 @@ Review.init(
         model: 'feature',
         key: 'id'
       }
+    },
+    review_rating: {
+      type: DataTypes.INTEGER, 
+      validate: {
+        len: [1,5]
+      }
     }
   },
   {
