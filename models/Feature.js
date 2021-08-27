@@ -12,6 +12,15 @@ Feature.init(
         type: DataTypes.STRING,
         allowNull: false
       },
+      cover_photo: {
+        type: DataTypes.STRING, 
+      },
+      cast: {
+        type: DataTypes.ARRAY, 
+      },
+      description: {
+        type: DataTypes.STRING,
+      },
       feature_url: {
         type: DataTypes.STRING,
         allowNull: false,
