@@ -14,8 +14,8 @@
   * [License](#license)
   
   ## Installation
-  
-  
+  npm i axios
+  npm i dotenv
   
   
   ## Usage 
