@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Review extends Model {}
+class Bucket extends Model {}
 
 Bucket.init(
   {
@@ -19,6 +19,8 @@ Bucket.init(
         key: 'id'
       }
     },
+  },
+    {
     sequelize,
     freezeTableName: true,
     underscored: true,
