@@ -1,4 +1,9 @@
-const Review = require('./Post');
+const Review = require('./Review');
 const User = require('./User');
 const Bucket = require('./Bucket');
-const Comment = require('./Comment');
+const Feature = require('./Feature');
+// const Comment = require('./Comment');
+
+
+
+module.exports = { User, Review, Bucket, Feature };

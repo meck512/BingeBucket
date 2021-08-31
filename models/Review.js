@@ -39,7 +39,9 @@ Review.init(
       validate: {
         len: [1,5]
       }
+    }
   },
+  {
     sequelize,
     freezeTableName: true,
     underscored: true,
