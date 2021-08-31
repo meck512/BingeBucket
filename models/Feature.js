@@ -1,3 +1,7 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
+class Feature extends Model {}
 // Once we decide what info we want from the api we will have to add things like movie poster, actors, imbd rating etc.
 
 Feature.init(
@@ -16,7 +20,7 @@ Feature.init(
         type: DataTypes.STRING, 
       },
       cast: {
-        type: DataTypes.ARRAY, 
+        type: DataTypes.STRING, 
       },
       description: {
         type: DataTypes.STRING,
@@ -40,7 +44,7 @@ Feature.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'Feature'
+      modelName: 'feature'
     }
   );
   

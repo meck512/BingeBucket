@@ -53,3 +53,6 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
       });
   });
+
+
+  module.exports = router;

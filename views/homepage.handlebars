@@ -1,9 +1,19 @@
-<div class="rating">
-<ol class="post-list">
-  {{#each posts as |post|}}
+ <div class="rating">
+<ol class="review-list">
+  {{#each reviews as |review|}}
   <li>
-    {{> post-info post }}
+    {{> review-info review }}
   </li>
+            <i class="rating__star far fa-star"></i>
+            <i class="rating__star far fa-star"></i>
+            <i class="rating__star far fa-star"></i>
+            <i class="rating__star far fa-star"></i>
+            <i class="rating__star far fa-star"></i>
   {{/each}}
+            
 </ol>
 </div>
+
+       
+            
+       
