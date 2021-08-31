@@ -1,8 +1,15 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 
+const streamData = require('../streamAPI');
+
 // get all users
-router.get('/', (req, res) => {
+// example of how to call getStreamList data from API
+router.get('/', async (req, res) => {
+  
+  const data = await streamData.getStreamList('netflix', 'series');
+  console.log(data);
+
   User.findAll({
     attributes: { exclude: ['password'] }
   })
