@@ -1,5 +1,6 @@
 const { Bucket, User, Feature, Comment, Review } = require('../models');
 
+//password123
 pwdHash = '$2b$10$tXLTXhV.nt2fFVS3KomLN.jhVQqhnrVZaSpnK/t/0nTjnnuy53WSq';
 
 const userdata = [
