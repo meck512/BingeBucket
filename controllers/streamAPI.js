@@ -60,18 +60,18 @@ async function getItemData(id) {
 	};
 
 	axios.request(options).then(function (response) {
-		console.log(response.data);
-		console.log(response.data.streamingInfo);
+		// console.log(response.data);
+		// console.log(response.data.streamingInfo);
 		// singleItem = response.data;
 		return response.data.results;
 	}).catch(function (error) {
 		console.error(error);
 	});
 };
-async function test() {
-	const data = await getStreamList('netflix', 'series');
-	console.log(data);
-};
-test();
+// async function test() {
+// 	const data = await getStreamList('netflix', 'series');
+// 	console.log(data);
+// };
+// test();
 
 exports.getStreamList = getStreamList;

@@ -37,12 +37,9 @@ User.hasMany(Review, {
     onDelete: 'SET NULL'
   });
  
-   
 
   Bucket.hasMany(Feature, {
     foreignKey: 'user_id'
   });
-
- 
 
 module.exports = { User, Review, Bucket, Feature, Comment };

@@ -26,7 +26,7 @@ Bucket.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Review'
+    modelName: 'Bucket'
   }
 );
 
