@@ -1,0 +1,11 @@
+<div class=" comments col-12">
+{{#each this}}
+    {{!-- SINGLE COMMENT CARD --}}
+    <div class="card text-dark bg-light mb-3 w-100">
+        <div class="card-header">{{user.username}} on {{created_at}}</div>
+        <div class="card-body">
+            <p class="card-text">{{comment_text}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
