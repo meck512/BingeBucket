@@ -4,49 +4,49 @@ const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
   console.log('======================');
-  console.log(req.body);
-  res.render('homepage');
- 
+  res.render('homepage', {
+    // posts,
+    // loggedIn: req.session.loggedIn
+  });
+
+  // Post.findAll({
+  //   attributes: [
+  //     'id',
+  //     'post_url',
+  //     'title',
+  //     'created_at'
+
+  //   ],
+  //   include: [
+  //     {
+  //       model: Comment,
+  //       attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+  //       include: {
+  //         model: User,
+  //         attributes: ['username']
+  //       }
+  //     },
+  //     {
+  //       model: User,
+  //       attributes: ['username']
+  //     }
+  //   ]
+  // })
+  //   .then(dbPostData => {
+  //     const posts = dbPostData.map(post => post.get({ plain: true }));
+
+  //     res.render('homepage', {
+  //       posts,
+  //       loggedIn: req.session.loggedIn
+  //     });
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //     res.status(500).json(err);
+  //   });
 });
 
-router.get('/bucket', (req, res) => {
-  // load users bucket if it exists
-  Bucket.findAll({
-    attributes: [
-      'user_id',
-      'feature_id'
-    ]
-    // ,
-    // include: [
-    //   {
-    //     model: Comment,
-    //     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-    //     include: {
-    //       model: User,
-    //       attributes: ['username']
-    //     }
-    //   },
-    //   {
-    //     model: User,
-    //     attributes: ['username']
-    //   }
-    // ]
-  })
-    .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-
-      res.render('homepage', {
-        // posts,
-        // loggedIn: req.session.loggedIn
-      });
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
-// get single bucket item
+// get single post
 router.get('/post/:id', (req, res) => {
   Post.findOne({
     where: {
