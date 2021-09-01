@@ -1,4 +1,4 @@
-const  { Bucket, User, Feature } = require('../models');
+const { Bucket, User, Feature, Comment, Review } = require('../models');
 
 const bucketdata = [
   {
@@ -31,6 +31,8 @@ const bucketdata = [
   }
 ];
 
+console.log('Bucket Data');
+console.log('********************');
 console.log(bucketdata);
 
 const seedBucket = () => Bucket.bulkCreate(bucketdata);
