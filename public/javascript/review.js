@@ -1,9 +1,9 @@
-async function newFormHandler(event) {
-    event.preventDefault();
 
-    const ratingStars = [...document.getElementsByClassName("rating__star")];
+    
 
-function executeRating(stars) {
+  const stars = [...document.getElementsByClassName("rating__star")];
+
+
   const starClassActive = "rating__star fas fa-star";
   const starClassInactive = "rating__star far fa-star";
   const starsLength = stars.length;
@@ -19,6 +19,4 @@ function executeRating(stars) {
       }
     };
   });
-}
-executeRating(ratingStars);
-}
+
