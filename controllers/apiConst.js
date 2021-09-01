@@ -29,7 +29,6 @@ const streamByCntyCd = {
     "peacock": ["us"],
     "prime": ["hr", "au", "de", "is", "th", "ph", "ru", "mx", "no", "ch", "il", "ae", "za", "mk", "be", "br", "ca", "lv", "sg", "gb", "ar", "ee", "at", "dk", "fr", "ro", "es", "cy", "hk", "rs", "gr", "it", "se", "tr", "ua", "cz", "ie", "jp", "nl", "us", "pa", "vn", "bg", "fi", "md", "nz", "pt", "in", "pl", "cl", "az"],
     "showtime": ["us"],
-    "stan": ["au"],
     "starz": ["us"]
 };
 

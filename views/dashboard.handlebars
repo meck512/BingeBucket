@@ -1,31 +1,41 @@
-<section>
-  <h2>Add a Review</h2>
+{{!-- DASHBOARD CONTAINER COLUMN (WILL EDIT) --}}
+<div class="col-12">
 
-  <form class="new-review-form">
-    <div>
-      <label for="review-title">Title</label>
-      <input type="text" id="review-title" name="review-title" />
-    </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
 
-{{#if posts.length}}
-<section>
-  <h2>Your reviews</h2>
-  <ol>
-    {{#each reviews as |review|}}
-    <li>
-      {{> review-info post}}
-      <a href="/dashboard/edit/{{review.id}}" class="edit-link">Edit Review</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
+  <section>
+    <h2>Add a Review</h2>
+
+    <form class="new-review-form">
+      <div>
+        <label for="review-title">Title</label>
+        <input type="text" id="review-title" name="review-title" />
+      </div>
+      <div>
+        <label for="post-url">Link</label>
+        <input id="post-url" name="post-url" />
+      </div>
+      <button type="submit" class="btn">Create</button>
+    </form>
+  </section>
+
+  {{#if posts.length}}
+  <section>
+    <h2>Your reviews</h2>
+    <ol>
+      {{#each reviews as |review|}}
+      <li>
+        {{> review-info post}}
+        <a href="/dashboard/edit/{{review.id}}" class="edit-link">Edit Review</a>
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+  {{/if}}
+
+
+
+</div>
+
+
 
 <script src="/javascript/review.js"></script>
