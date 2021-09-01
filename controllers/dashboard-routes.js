@@ -35,6 +35,9 @@ router.get('/', withAuth, (req, res) => {
         model: Feature,
         attributes: ['id', 'title', 'cover_photo', 'cast', 'description', 'feature_url', 'user_id'],
         
+      },
+      {
+        model: Bucket
       }
     ]
   })
