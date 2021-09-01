@@ -1,20 +1,27 @@
- <div class="rating">
-<ol class="review-list">
-  {{#each reviews as |review|}}
-  <li>
-    {{> review-info review }}
-  </li>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-  {{/each}}
-            
-</ol>
-<script src='/javascript/review.js'></script>
-</div>
+{{!-- homepage CONTAINER COLUMN (WILL EDIT) --}}
+<div class="col-12">
 
-       
-            
-       
+
+
+
+  <div class="rating">
+    <ol class="review-list">
+      {{#each reviews as |review|}}
+      <li>
+        {{> review-info review }}
+      </li>
+      <i class="rating__star far fa-star"></i>
+      <i class="rating__star far fa-star"></i>
+      <i class="rating__star far fa-star"></i>
+      <i class="rating__star far fa-star"></i>
+      <i class="rating__star far fa-star"></i>
+      {{/each}}
+
+    </ol>
+  </div>
+
+
+
+
+
+</div>
