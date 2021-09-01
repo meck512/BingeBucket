@@ -1,28 +1,37 @@
-<a href="/BingeBucket/views/homepage.handlebars" class="go-back"> &larr; Back to BingeBucket homepage</a>
+{{!-- EDIT COMMENT CONTAINER COLUMN (WILL EDIT) --}}
+<div class="col-12">
 
-<article class="new-page">
-    <section class="edit-form-page">
-        <div class="form-heading">
-            <h2>
-                Edit comment
-            </h2>
-        </div>
-        <div class="form-section">
-            <form class="edit-post-form">
-                <div class="post-title-section">
-                    <label for="post-title">Title</label>
-                    <input type="text" name="post-title" id="post-title" value="{{post.title}}" />
-                </div>
-                <div class="post-content">
-                    <label for="post-content">Content</label>
-                    <textarea class="entry-field" id="post-content" name="post-content">{{post.content}}</textarea>
-                </div>
-                <button type="submit">Update comment</button>
-                <button type="button" class="delete-post-btn">Delete post</button>
-            </form>
-        </div>
-    </section>
-</article>
+
+
+    <a href="/BingeBucket/views/homepage.handlebars" class="go-back"> &larr; Back to BingeBucket homepage</a>
+
+    <article class="new-page">
+        <section class="edit-form-page">
+            <div class="form-heading">
+                <h2>
+                    Edit comment
+                </h2>
+            </div>
+            <div class="form-section">
+                <form class="edit-post-form">
+                    <div class="post-title-section">
+                        <label for="post-title">Title</label>
+                        <input type="text" name="post-title" id="post-title" value="{{post.title}}" />
+                    </div>
+                    <div class="post-content">
+                        <label for="post-content">Content</label>
+                        <textarea class="entry-field" id="post-content" name="post-content">{{post.content}}</textarea>
+                    </div>
+                    <button type="submit">Update comment</button>
+                    <button type="button" class="delete-post-btn">Delete post</button>
+                </form>
+            </div>
+        </section>
+    </article>
+
+
+
+</div>
 
 {{#if loggedIn}}
 <script src="/BingeBucket/public/javascript/edit-comment.js"></script>
