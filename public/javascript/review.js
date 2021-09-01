@@ -1,7 +1,7 @@
 
     
 
-    const stars = [...document.getElementsByClassName("rating__star")];
+  const stars = [...document.getElementsByClassName("rating__star")];
 
 
   const starClassActive = "rating__star fas fa-star";
