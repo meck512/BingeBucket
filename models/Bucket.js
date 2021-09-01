@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const Feature = require('./Feature');
 
 class Bucket extends Model {}
 
@@ -18,13 +19,14 @@ Bucket.init(
         model: 'feature',
         key: 'id'
       }
-    },
+    }
+    
   },
     {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Review'
+    modelName: 'Bucket'
   }
 );
 

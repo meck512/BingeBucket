@@ -14,10 +14,17 @@
   * [License](#license)
   
   ## Installation
-  npm i axios
-  npm i dotenv
-  
-  
+```
+* npm init -y
+* npm install axios
+* npm install express
+* npm install mysql2
+* npm install sequelize 
+* npm install dotenv
+* npm install express-handlebars
+* npm install express-session connect-session-sequelize
+* npm install bcrypt
+```  
   ## Usage 
   
    
