@@ -45,7 +45,7 @@ const featuredata = [
 
 console.log('Feature Data');
 console.log('********************');
-console.log(featuredata);
+// console.log(featuredata);
 
 const seedFeature = () => Feature.bulkCreate(featuredata);
 

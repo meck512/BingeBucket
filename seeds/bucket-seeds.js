@@ -33,7 +33,7 @@ const bucketdata = [
 
 console.log('Bucket Data');
 console.log('********************');
-console.log(bucketdata);
+// console.log(bucketdata);
 
 const seedBucket = () => Bucket.bulkCreate(bucketdata);
 

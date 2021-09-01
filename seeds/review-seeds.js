@@ -35,7 +35,7 @@ const reviewdata = [
 
 console.log('Review Data');
 console.log('********************');
-console.log(reviewdata);
+// console.log(reviewdata);
 
 const seedReview = () => Review.bulkCreate(reviewdata);
 
