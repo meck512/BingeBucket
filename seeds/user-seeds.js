@@ -1,4 +1,4 @@
-const  User  = require('../models');
+const  { Bucket, User, Feature } = require('../models');
 
 const userdata = [
   {

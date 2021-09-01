@@ -4,6 +4,4 @@ const Bucket = require('./Bucket');
 const Feature = require('./Feature');
 const Comment = require('./Comment');
 
-
-
 module.exports = { User, Review, Bucket, Feature, Comment };
