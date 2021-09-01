@@ -1,7 +1,7 @@
 async function createPostHandler(event) {
     event.preventDefault();
   // needs to be routed
-    document.location.replace('/homepage')
+    document.location.replace('/homepage/new')
   }
   
   

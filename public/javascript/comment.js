@@ -9,7 +9,7 @@ async function commentFormHandler(event) {
 
     if (comment_text) {
         // needs to be routed
-        const response = await fetch('', {
+        const response = await fetch('/api/comments', {
             method: 'POST',
             body: JSON.stringify({
                 post_id,
