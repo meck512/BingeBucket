@@ -1,4 +1,6 @@
-
+*{
+   font-style: italic;
+}
 .rating {
     width: 180px;
  }
@@ -7,3 +9,21 @@
     cursor: pointer;
     color: #dabd18b2;
  }
+
+ div.accordian-body{
+   color: #0c63e4;
+   background-color: #FEB7EE;
+}
+
+
+body {
+    background: black;
+}
+
+.accordion-button {
+    background: black;
+}
+
+.accordion-body {
+    background: black;
+}
