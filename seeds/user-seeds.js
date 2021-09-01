@@ -1,4 +1,4 @@
-const  User  = require('../models');
+const { Bucket, User, Feature, Comment, Review } = require('../models');
 
 const userdata = [
   {
@@ -33,6 +33,8 @@ const userdata = [
   }
 ];
 
+console.log('User Data');
+console.log('********************');
 console.log(userdata);
 
 const seedUser = () => User.bulkCreate(userdata);
