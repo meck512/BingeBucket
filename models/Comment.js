@@ -31,7 +31,15 @@ Comment.init(
           model: 'review',
           key: 'id'
         }
+      },
+      feature_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'feature',
+          key: 'id'
+        }
       }
+        
     },
     {
       sequelize,

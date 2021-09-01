@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Review, Comment } = require('../../models');
+const { User, Review, Comment, Feature, Bucket } = require('../../models');
 
 const streamData = require('../streamAPI');
 
@@ -29,15 +29,20 @@ router.get('/:id', (req, res) => {
       include: [
         {
           model: Review,
-          attributes: ['id', 'Review_text', 'Review_rating']
+          attributes: ['id', 'Review_text', 'review_rating']
         },
         {
           model: Comment,
-          attributes: ['id', 'comment_text', 'created_at'],
-          include: {
-            model: Post,
-            attributes: ['title']
-          }
+          attributes: ['id', 'comment_text', 'created_at']
+          
+        },
+        {
+          model: Feature,
+          attributes: ['title', 'cover_photo']
+        },
+        {
+          model: Bucket,
+          
         }
       ]
     })

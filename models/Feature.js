@@ -39,6 +39,7 @@ Feature.init(
           key: 'id'
         }
       }
+      
     },
     {
       sequelize,
