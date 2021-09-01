@@ -6,4 +6,5 @@ const Feature = require('./Feature');
 
 
 
-module.exports = { User, Review, Bucket, Feature };
+// module.exports = { User, Review, Bucket, Feature, Comment };
+// module.exports = { User, Review, Bucket, Feature };
