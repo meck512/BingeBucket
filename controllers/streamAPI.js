@@ -30,7 +30,8 @@ const getStreamList = async function (servicesIn, typeIn) {
 		},
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
-			'x-rapidapi-key': process.env.STREAM_API_KEY
+			// 'x-rapidapi-key': process.env.STREAM_API_KEY
+			'x-rapidapi-key': "f2ee12cbffmsh9a043e6ff8eb403p15aba3jsn46870cf178d2"
 		}
 	};
 
@@ -41,7 +42,7 @@ const getStreamList = async function (servicesIn, typeIn) {
 	// 	// console.log(response.data.results);
 	// 	return response.data.results;
 	// }).catch(function (error) {
-		// console.error(error);
+	// console.error(error);
 	// });
 };
 
@@ -55,7 +56,8 @@ async function getItemData(id) {
 		params: { country: 'us', tmdb_id: id },
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
-			'x-rapidapi-key': process.env.STREAM_API_KEY
+			// 'x-rapidapi-key': process.env.STREAM_API_KEY
+			'x-rapidapi-key': "f2ee12cbffmsh9a043e6ff8eb403p15aba3jsn46870cf178d2"
 		}
 	};
 
@@ -68,10 +70,6 @@ async function getItemData(id) {
 		console.error(error);
 	});
 };
-// async function test() {
-// 	const data = await getStreamList('netflix', 'series');
-// 	console.log(data);
-// };
-// test();
+
 
 exports.getStreamList = getStreamList;
