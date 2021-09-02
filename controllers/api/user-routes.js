@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Review, Comment, Feature, Bucket } = require('../../models');
+const { User, Review, Comment, Feature } = require('../../models');
 
 const streamData = require('../streamAPI');
 
@@ -25,26 +25,7 @@ router.get('/:id', (req, res) => {
       attributes: { exclude: ['password'] },
       where: {
         id: req.params.id
-      },
-      include: [
-        {
-          model: Review,
-          attributes: ['id', 'Review_text', 'review_rating']
-        },
-        {
-          model: Comment,
-          attributes: ['id', 'comment_text', 'created_at']
-          
-        },
-        {
-          model: Feature,
-          attributes: ['title', 'cover_photo']
-        },
-        {
-          model: Bucket,
-          
-        }
-      ]
+      }
     })
       .then(dbUserData => {
         if (!dbUserData) {
