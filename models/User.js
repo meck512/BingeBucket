@@ -37,6 +37,11 @@ User.init(
       validate: {
         len: [4]
       }
+    },
+    featureBucket: {
+      // features : [{ featureID }]
+      type: DataTypes.STRING,
+      allowNull: true
     }
   },
   {
@@ -52,7 +57,7 @@ User.init(
         return updatedUserData;
       }
     },
-    
+
     sequelize,
     timestamps: false,
     freezeTableName: true,

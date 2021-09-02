@@ -30,7 +30,7 @@ const commentdata = [
 
 console.log('Comment Data');
 console.log('********************');
-console.log(commentdata);
+// console.log(commentdata);
 
 const seedComment = () => Comment.bulkCreate(commentdata);
 

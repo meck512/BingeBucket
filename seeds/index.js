@@ -1,4 +1,3 @@
-const seedBucket = require('./bucket-seeds');
 const seedComment = require('./comment-seeds');
 const seedFeature = require('./feature-seeds');
 const seedReview = require('./review-seeds');
@@ -12,7 +11,6 @@ const seedAll = async () => {
 
   await seedUser();
   await seedFeature();
-  await seedBucket();
   await seedReview();
   await seedComment();
 
