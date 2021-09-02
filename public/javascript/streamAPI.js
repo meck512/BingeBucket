@@ -126,6 +126,11 @@ async function getItemData(id) {
 	});
 };
 
-const returnArry =  getStreamList('netflix','series');
+const returnNetSeriesArry =  getStreamList('netflix','series');
+
+const returnNetMovieArry = getStreamList('netflix', 'movies');
+
+const fullNetArry = returnNetSeriesArry.concat(returnNetMovieArry);
+
 
 // exports.getStreamList = getStreamList;
