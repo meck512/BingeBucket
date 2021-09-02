@@ -26,21 +26,8 @@ Review.init(
         model: 'user',
         key: 'id'
       }
-    },
-    feature_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'feature',
-        key: 'id'
-      }
-    },
-    review_rating: {
-      type: DataTypes.INTEGER, 
-      validate: {
-        len: [1,5]
-      }
     }
-  },
+    },
   {
     sequelize,
     freezeTableName: true,

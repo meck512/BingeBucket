@@ -20,7 +20,6 @@ Bucket.init(
         key: 'id'
       }
     }
-    
   },
     {
     sequelize,

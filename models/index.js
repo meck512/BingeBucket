@@ -4,6 +4,9 @@ const Bucket = require('./Bucket');
 const Feature = require('./Feature');
 const Comment = require('./Comment');
 
+User.hasOne(Bucket, {
+  foreignKey: 'user_id'
+});
 
 Bucket.belongsTo(User, {
   foreignKey: 'user_id'
@@ -23,6 +26,10 @@ Feature.hasMany(Review, {
 
 Review.hasMany(Comment, {
   foreignKey: 'comment_id',
+});
+
+Comment.belongsTo(Review, {
+  foreignKey: 'review_id',
 });
 
 

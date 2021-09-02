@@ -1,0 +1,29 @@
+{{!-- REVIEW MODAL --}}
+<div class="modal fade " id="reviewButtonModal" tabindex="-1" aria-labelledby="reviewButtonModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-dark" id="reviewButtonModalLabel">BingeBucket Reviews</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            {{!-- review-card INPUT DIV --}}
+            <div class="reviewCardInputDiv modal-body text-dark">
+                {{#each reviews as |review|}}
+                {{#if reviews.length}}
+
+                {{> review-card review}}
+
+                {{/if}}
+                {{/each}}
+                <div class="modal-footer">
+                    {{!-- addReviewButton --}}
+                    <button type="button" class="addReviewButton btn btn-primary">Write Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{!-- pretty sure we need to connect this and the homepage, because when the reviewButtonModal BUTTON is clicked this modal will appear --}}

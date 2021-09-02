@@ -3,41 +3,34 @@
     <img src="https://pyxis.nymag.com/v1/imgs/978/4d0/4b4779e1dcb86984abe55c08366f9babe7-13-empty-theater.rsquare.w700.jpg"
         class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title">FEATURE TITLE</h5>
+        <h5 class="card-title">{{featureTitle}}</h5>
     </div>
     <div class="card-body">
         <div class="accordion" id="accordionExample">
-
-            {{!-- description --}}
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                    <button class="descriptionButton accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        DESCRIPTION
+                        Description
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, et
-                        iusto? Labore quidem asperiores nesciunt ratione sit distinctio soluta, id molestias mollitia
-                        quam veritatis quia placeat dolore, eaque minima quis?
+                    <div class="accordion-body">
+                        {{featureDescription}}
                     </div>
                 </div>
             </div>
-
-            {{!-- cast --}}
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                    <button class="castButton accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        CAST
+                        Cast
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aperiam
-                        atque deserunt? Nisi enim eaque eum maxime tenetur, repudiandae inventore cumque quod magnam
-                        esse! Adipisci odio voluptates atque sint qui!</div>
+                    <div class="accordion-body">{{featureCast}}</div>
                 </div>
             </div>
         </div>
@@ -45,11 +38,12 @@
 
     {{!-- buttons --}}
     <div class="card-body d-grid gap-2">
-        <button class="btn btn-primary" type="button">ADD TO BUCKET</button>
+        <button class="add2BucketButton btn btn-primary" type="button">Add to Bucket</button>
         <!-- REVIEW Button trigger modal -->
-        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#reviewButtonModal">REVIEWS
+        <button class="reviewModalTrigger btn btn-primary" type="button" data-bs-toggle="modal"
+            data-bs-target="#reviewButtonModal">BingeBucket Reviews
             <span class="badge bg-dark">10</span></button>
         {{!-- link to streaming service --}}
-        <button class="btn btn-primary" type="button">WATCH ON "PLATFORM"</button>
+        <button class="platformLinkButton btn btn-primary" type="button">{{featurePlatform}}</button>
     </div>
 </div>
