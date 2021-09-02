@@ -41,7 +41,7 @@ const getStreamList = async function (servicesIn, typeIn) {
 	// 	// console.log(response.data.results);
 	// 	return response.data.results;
 	// }).catch(function (error) {
-		// console.error(error);
+	// console.error(error);
 	// });
 };
 

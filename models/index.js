@@ -15,5 +15,5 @@ Comment.belongsTo(Review, {
 });
 
 
-module.exports = { User, Review,  Feature, Comment };
+module.exports = { User, Review, Feature, Comment };
 
