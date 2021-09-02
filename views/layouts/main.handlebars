@@ -33,9 +33,6 @@
               </li>
               {{#if loggedIn}}
               <li class="nav-item">
-                <a class="nav-link" href="#">Homepage</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" id="logout">Logout</a>
               </li>
               {{else}}
@@ -56,17 +53,6 @@
     {{{ body }}}
   </main>
   {{!-- Main Import End --}}
-
-
-  {{!-- Foooter --}}
-  <div class="row">
-    <div class="col-12 justify-center">
-      <footer>
-        &copy; Proudly presented by the Binge Bucket Team
-      </footer>
-    </div>
-  </div>
-  {{!-- Footer End --}}
 
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
