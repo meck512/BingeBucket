@@ -4,7 +4,6 @@ const Feature = require('./Feature');
 const Comment = require('./Comment');
 
 
-
 Feature.hasMany(Review, {
   foreignKey: 'review_id'
 });
