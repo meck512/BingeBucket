@@ -1,45 +1,30 @@
 const Review = require('./Review');
 const User = require('./User');
-const Bucket = require('./Bucket');
+// const Bucket = require('./Bucket');
 const Feature = require('./Feature');
 const Comment = require('./Comment');
 
-User.hasMany(Review, {
-    foreignKey: 'user_id'
-  });
+// User.hasOne(Bucket, {
+//   foreignKey: 'user_id'
+// });
+// Bucket.belongsTo(User, {
+//   foreignKey: 'user_id'
+// });
+// Feature.belongsTo(Bucket, {
+//   foreignKey: 'user_id'
+// });
+// Bucket.hasMany(Feature, {
+//   foreignKey: 'feature_id'
+// });
+Feature.hasMany(Review, {
+  foreignKey: 'review_id'
+});
+Review.hasMany(Comment, {
+  foreignKey: 'comment_id',
+});
+Comment.belongsTo(Review, {
+  foreignKey: 'review_id',
+});
 
-  Review.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
-  });
-
-  Comment.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
-  });
-
-  User.hasMany(Comment, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
-  });
-
-  User.hasMany(Review, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
-  });
-
-  Review.hasMany(Comment, {
-    foreignKey: 'review_id'
-  });
-
-  Bucket.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
-  });
- 
-
-  Bucket.hasMany(Feature, {
-    foreignKey: 'user_id'
-  });
-
-module.exports = { User, Review, Bucket, Feature, Comment };
+// module.exports = { User, Review, Bucket, Feature, Comment };
+module.exports = { User, Review,  Feature, Comment };

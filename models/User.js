@@ -37,6 +37,11 @@ User.init(
       validate: {
         len: [4]
       }
+    },
+    featureBucket: {
+      // features : [{ featureID }]
+      type: DataTypes.STRING,
+      allowNull: true
     }
   },
   {
