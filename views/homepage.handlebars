@@ -1,17 +1,20 @@
 <div class="container">
-
-
   <div class="row">
     <div class="bg-dark bucketPane col">
+      {{#if loggedIn}}
+
+<p>WORKS</p>
 
 
+
+      {{else}}
       {{!-- Login Card --}}
       <div class="card text-dark bg-dark border-light my-2">
         <div class="card-body">
           {{!-- Login Form --}}
           <form class="login-form">
             <div class="form-floating mb-1">
-              <input type="email" class="form-control" id="email-login" placeholder="name@example.com">
+              <input type="text" class="form-control" id="email-login" placeholder="name@example.com">
               <label for="email-login">Email</label>
             </div>
             <div class="form-floating mb-1">
@@ -22,18 +25,15 @@
               <button class="btn btn-body text-light" type="submit">Login</button>
             </div>
           </form>
-          {{!-- End Login Form --}}
-
         </div>
       </div>
-
+      {{!-- End Login Card --}}
 
       {{!-- Sign-up Card --}}
       <div class="card text-dark bg-dark border-light my-2">
         <div class="card-body">
           {{!-- Sign-up Form --}}
           <form class="signup-form">
-
             <div class="form-floating mb-1">
               <input type="text" class="form-control" id="username-signup">
               <label for="username-signup">Username</label>
@@ -50,13 +50,14 @@
               <button class="btn btn-body text-light" type="submit">Join BingeBucket</button>
             </div>
           </form>
-          {{!-- End Sign-up Form --}}
         </div>
       </div>
+      {{!-- End Sign-up Card --}}
+      {{/if}}
 
     </div>
 
-
+    {{!-- MainView Start --}}
     <div class="mainView col-8 my-2">
       <div class="row row-cols-1 row-cols-md-3 g-4">
         {{!-- Netflix --}}
@@ -67,14 +68,11 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search Netflix" aria-label="Search Netflix"
                   aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+                <button class="btn btn-outline-secondary" type="button" id="searchNetflixButton">></button>
               </div>
             </div>
           </div>
-
         </div>
-
-
 
         {{!-- Hulu --}}
         <div class="col">
@@ -84,14 +82,11 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search Hulu" aria-label="Search Hulu"
                   aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+                <button class="btn btn-outline-secondary" type="button" id="searchHuluButton">></button>
               </div>
             </div>
           </div>
-
         </div>
-
-
 
         {{!-- Amazon Prime --}}
         <div class="col">
@@ -101,15 +96,11 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search Prime" aria-label="Search Prime"
                   aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
-                >>>>>>> 72a7a0d7d50628d7fc48b9796b83f56174b2f847
+                <button class="btn btn-outline-secondary" type="button" id="searchPrimeButton">></button>
               </div>
             </div>
           </div>
-
         </div>
-
-
 
         {{!-- Showtime --}}
         <div class="col">
@@ -119,13 +110,11 @@
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search Showtime" aria-label="Search Showtime"
                   aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+                <button class="btn btn-outline-secondary" type="button" id="searchShowtimeButton">></button>
               </div>
             </div>
           </div>
-
         </div>
-
 
         {{!-- Apple TV --}}
         <div class="col">
@@ -135,7 +124,7 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search AppleTV" aria-label="Search AppleTV"
                   aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+                <button class="btn btn-outline-secondary" type="button" id="searchAppleButton">></button>
               </div>
             </div>
           </div>
@@ -150,7 +139,7 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search Paramount" aria-label="Search Paramount"
                   aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+                <button class="btn btn-outline-secondary" type="button" id="searchParamountButton">></button>
               </div>
             </div>
           </div>
@@ -165,7 +154,7 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search DisneyPlus" aria-label="Search DisneyPlus"
                   aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+                <button class="btn btn-outline-secondary" type="button" id="searchDisneyButton">></button>
               </div>
             </div>
           </div>
@@ -181,11 +170,10 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search HBO" aria-label="Search HBO"
                   aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+                <button class="btn btn-outline-secondary" type="button" id="searchHBOButton">></button>
               </div>
             </div>
           </div>
-
         </div>
 
 
@@ -197,42 +185,17 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search Peacock" aria-label="Search Peacock"
                   aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+                <button class="btn btn-outline-secondary" type="button" id="searchPeacockButton">></button>
               </div>
             </div>
           </div>
-
-
         </div>
 
 
       </div>
     </div>
   </div>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                      </div>
-                                    </div>
-
-
-                                    {{!--
-                                    <script> APICALL</script> --}}
-                                  </div>
+<script src="/javascript/login.js"></script>
