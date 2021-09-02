@@ -1,7 +1,74 @@
 <div class="container">
   <div class="row">
-    <div class="bg-dark bucketPane col">
+    <div class="bg-dark min-vh-100 bucketPane col">
       {{#if loggedIn}}
+
+
+      <div class="card-body">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="descriptionButton accordion-button collapsed bg-light" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                aria-controls="collapseOne">
+                My Movies
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+
+              <div class="accordion-body">
+                
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="castButton accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                My Shows
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+
+              <div class="accordion-body">
+                {{#each featureBucket}}
+
+                {{/each}}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <p>WORKS</p>
       {{else}}
       {{!-- Login Card --}}
@@ -51,6 +118,16 @@
       {{!-- End Sign-up Card --}}
       {{/if}}
 
+      {{!-- Foooter --}}
+      <div class="row">
+        <div class="col-12">
+          <footer>
+            &copy; Proudly presented by the Binge Bucket Team
+          </footer>
+        </div>
+      </div>
+      {{!-- Footer End --}}
+
     </div>
 
     {{!-- MainView Start --}}
@@ -62,7 +139,7 @@
             <img src="../assets/images/netflixLogo.png" alt="logo">
             <div class="card-body">
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search Netflix" aria-label="Search Netflix"
+                <input type="text" idclass="form-control" placeholder="Search Netflix" aria-label="Search Netflix"
                   aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary" type="button" id="searchNetflixButton">></button>
               </div>
@@ -71,7 +148,7 @@
         </div>
 
         {{!-- Hulu --}}
-        <div class="col">
+        {{!-- <div class="col">
           <div class="card h-100 bg-body">
             <img src="../assets/images/netflixLogo.png" alt="logo">
             <div class="card-body">
@@ -82,10 +159,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
         {{!-- Amazon Prime --}}
-        <div class="col">
+        {{!-- <div class="col">
           <div class="card h-100 bg-body">
             <img src="../assets/images/netflixLogo.png" alt="logo">
             <div class="card-body">
@@ -96,10 +173,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
         {{!-- Showtime --}}
-        <div class="col">
+        {{!-- <div class="col">
           <div class="card h-100 bg-body">
             <img src="../assets/images/netflixLogo.png" alt="logo">
             <div class="card-body">
@@ -110,10 +187,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
         {{!-- Apple TV --}}
-        <div class="col">
+        {{!-- <div class="col">
           <div class="card h-100 bg-body">
             <img src="../assets/images/netflixLogo.png" alt="logo">
             <div class="card-body">
@@ -125,10 +202,10 @@
             </div>
           </div>
 
-        </div>
+        </div> --}}
 
         {{!-- Paramount --}}
-        <div class="col">
+        {{!-- <div class="col">
           <div class="card h-100 bg-body">
             <img src="../assets/images/netflixLogo.png" alt="logo">
             <div class="card-body">
@@ -139,11 +216,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
 
         {{!-- Disney --}}
-        <div class="col">
+        {{!-- <div class="col">
           <div class="card h-100 bg-body">
             <img src="../assets/images/netflixLogo.png" alt="logo">
             <div class="card-body">
@@ -154,12 +231,12 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
 
 
         {{!-- HBO --}}
-        <div class="col">
+        {{!-- <div class="col">
           <div class="card h-100 bg-body">
             <img src="../assets/images/netflixLogo.png" alt="logo">
             <div class="card-body">
@@ -170,11 +247,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
 
         {{!-- Peacock --}}
-        <div class="col">
+        {{!-- <div class="col">
           <div class="card h-100 bg-body">
             <img src="../assets/images/netflixLogo.png" alt="logo">
             <div class="card-body">
@@ -185,10 +262,20 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
+
 
 
       </div>
+
+      <div id="cardBox">
+
+      </div>
+
+
+
+
+
     </div>
   </div>
 </div>
