@@ -3,7 +3,6 @@ const User = require('./User');
 const Feature = require('./Feature');
 const Comment = require('./Comment');
 
-
 Feature.hasMany(Review, {
   foreignKey: 'review_id'
 });
@@ -15,5 +14,5 @@ Comment.belongsTo(Review, {
 });
 
 
-module.exports = { User, Review, Feature, Comment };
+module.exports = { User, Review,  Feature, Comment };
 
