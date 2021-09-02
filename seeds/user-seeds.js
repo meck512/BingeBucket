@@ -43,10 +43,7 @@ const userdata = [
     featureBucket: JSON.stringify([1,2])
   }
 ];
-
 console.log('User Data');
 console.log('********************');
-
 const seedUser = () => User.bulkCreate(userdata);
-
 module.exports = seedUser;

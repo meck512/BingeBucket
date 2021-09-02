@@ -4,30 +4,14 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
     Review.findAll({
-      attributes: [
-        'id',
-        'Review_text',
-        'user_id',
-        'feature_id',
-        'review_rating'
-      ],
+     
       include: [
+     
         {
-          model: User,
-          attributes: ['username']
-        },
-        {
-          model: Comment,
-          attributes: ['id', 'comment_text', 'user_id', 'review_id'],
-          include: {
-            model: User,
-            attributes: ['username']
-          }
-        },
-        {
-          model: Feature,
-          attributes: ['id', 'title', 'cover_photo', 'feature_url']
+          model: Comment
+          
         }
+       
       ]
     })
       .then(dbReviewData => res.json(dbReviewData))
@@ -42,30 +26,10 @@ router.get('/', (req, res) => {
       where: {
         id: req.params.id
       },
-      attributes: [
-        'id',
-        'Review_text',
-        'user_id',
-        'feature_id',
-        'review_rating'
-        
-      ],
+     
       include: [
         {
-          model: Comment,
-          attributes: ['id', 'comment_text', 'user_id', 'review_id'],
-          include: {
-            model: User,
-            attributes: ['username']
-          }
-        },
-        {
-          model: User,
-          attributes: ['username']
-        },
-        {
-          model: Feature,
-          attributes: ['id', 'title', 'cover_photo', 'feature_url']
+          model: Comment
         }
       ]
     })
@@ -85,10 +49,10 @@ router.get('/', (req, res) => {
   router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Review.create({
-                comment_text: req.body.comment_text,
-                post_id: req.body.post_id,
-                user_id: req.session.user_id,
-                review_rating: req.body.review_rating
+                Review_text: req.body.Review_text,
+                // post_id: req.body.post_id,
+                user_id: req.session.user_id
+                
             })
             .then(dbReviewData => res.json(dbReviewData))
             .catch(err => {
