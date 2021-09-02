@@ -1,3 +1,58 @@
+// async function loginFormHandler(event) {
+//   event.preventDefault();
+
+//   const email = document.querySelector('#email-login').value.trim();
+//   const password = document.querySelector('#password-login').value.trim();
+ 
+//   if (email && password) {
+//     const response = await fetch('/api/users/login', {
+//       method: 'post',
+//       body: JSON.stringify({
+//         email,
+//         password
+//       }),
+//       headers: { 'Content-Type': 'application/json' }
+//     });
+
+//     if (response.ok) {
+//       document.location.replace('/dashboard/');
+//     } else {
+//       alert(response.statusText);
+//     }
+//   }
+// }
+
+// async function signupFormHandler(event) {
+//   event.preventDefault();
+
+//   const username = document.querySelector('#username-signup').value.trim();
+//   const email = document.querySelector('#email-signup').value.trim();
+//   const password = document.querySelector('#password-signup').value.trim();
+
+//   if (username && email && password) {
+//     const response = await fetch('/api/users', {
+//       method: 'post',
+//       body: JSON.stringify({
+//         username,
+//         email,
+//         password
+//       }),
+//       headers: { 'Content-Type': 'application/json' }
+//     });
+
+//     if (response.ok) {
+//       document.location.replace('/dashboard/');
+//     } else {
+//       alert(response.statusText);
+//     }
+//   }
+// }
+
+// document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+
+// document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+
+
 require('dotenv').config();
 var axios = require("axios").default;
 
@@ -30,7 +85,8 @@ const getStreamList = async function (servicesIn, typeIn) {
 		},
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
-			'x-rapidapi-key': process.env.STREAM_API_KEY
+			// 'x-rapidapi-key': process.env.STREAM_API_KEY
+			'x-rapidapi-key': "f2ee12cbffmsh9a043e6ff8eb403p15aba3jsn46870cf178d2"
 		}
 	};
 
@@ -41,7 +97,7 @@ const getStreamList = async function (servicesIn, typeIn) {
 	// 	// console.log(response.data.results);
 	// 	return response.data.results;
 	// }).catch(function (error) {
-		// console.error(error);
+	// console.error(error);
 	// });
 };
 
@@ -55,7 +111,8 @@ async function getItemData(id) {
 		params: { country: 'us', tmdb_id: id },
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
-			'x-rapidapi-key': process.env.STREAM_API_KEY
+			// 'x-rapidapi-key': process.env.STREAM_API_KEY
+			'x-rapidapi-key': "f2ee12cbffmsh9a043e6ff8eb403p15aba3jsn46870cf178d2"
 		}
 	};
 
@@ -68,12 +125,7 @@ async function getItemData(id) {
 		console.error(error);
 	});
 };
-// async function test() {
-// 	const data = await getStreamList('netflix', 'series');
-// 	console.log(data);
-// };
-// test();
 
+const returnArry =  getStreamList('netflix','series');
 
-
-exports.getStreamList = getStreamList;
+// exports.getStreamList = getStreamList;
