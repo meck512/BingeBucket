@@ -14,22 +14,22 @@
 // 	console.error(error);
 // });
 const streamByCntyCd = {
-    "all4": ["gb", "ie"],
+    // "all4": ["gb", "ie"],
     "apple": ["ie", "es", "nl", "gb", "pl", "lv", "ch", "dk", "se", "no", "it", "md", "in", "cz", "gr", "ua", "ca", "pt", "mx", "ru", "bg", "cy", "fi", "be", "ae", "at", "ee", "th", "de", "az", "fr", "br", "vn", "sg", "us", "jp", "il", "hk", "za", "pa", "au", "ph", "cl", "ar", "nz"],
-    "britbox": ["gb", "us", "ca", "au", "za"],
-    "crave": ["ca"],
+    // "britbox": ["gb", "us", "ca", "au", "za"],
+    // "crave": ["ca"],
     "disney": ["ca", "gb", "us", "nl", "au", "nz", "at", "de", "it", "es", "ch", "fr", "be", "dk", "fi", "no", "pt", "se", "ar", "br", "cl", "co", "mx"],
     "hbo": ["us", "ar", "br", "cl", "co", "ec", "mx", "pe", "ve"],
     "hulu": ["us"],
-    "iplayer": ["gb"],
-    "mubi": ["ch", "il", "pt", "ru", "be", "es", "lv", "at", "mk", "pl", "md", "ua", "rs", "se", "jp", "ee", "ca", "cy", "ro", "bg", "dk", "fi", "nl", "fr", "az", "gb", "no", "gr", "de", "hk", "us", "it", "ae", "sg", "ie", "vn", "pa", "za", "cl", "au", "nz", "tr", "ar", "th", "in", "br", "ph", "mx", "hr"],
+    // "iplayer": ["gb"],
+    // "mubi": ["ch", "il", "pt", "ru", "be", "es", "lv", "at", "mk", "pl", "md", "ua", "rs", "se", "jp", "ee", "ca", "cy", "ro", "bg", "dk", "fi", "nl", "fr", "az", "gb", "no", "gr", "de", "hk", "us", "it", "ae", "sg", "ie", "vn", "pa", "za", "cl", "au", "nz", "tr", "ar", "th", "in", "br", "ph", "mx", "hr"],
     "netflix": ["ar", "at", "au", "be", "br", "ca", "ch", "cl", "co", "cz", "de", "dk", "ec", "ee", "es", "fi", "fr", "gb", "gr", "hu", "id", "ie", "in", "it", "jp", "kr", "lt", "lv", "mx", "my", "nl", "no", "nz", "pe", "ph", "pl", "pt", "ro", "ru", "se", "sg", "th", "tr", "us", "ve", "za"],
-    "now": ["gb", "ie", "it"],
+    // "now": ["gb", "ie", "it"],
     "paramount": ["us"],
     "peacock": ["us"],
     "prime": ["hr", "au", "de", "is", "th", "ph", "ru", "mx", "no", "ch", "il", "ae", "za", "mk", "be", "br", "ca", "lv", "sg", "gb", "ar", "ee", "at", "dk", "fr", "ro", "es", "cy", "hk", "rs", "gr", "it", "se", "tr", "ua", "cz", "ie", "jp", "nl", "us", "pa", "vn", "bg", "fi", "md", "nz", "pt", "in", "pl", "cl", "az"],
     "showtime": ["us"],
-    "starz": ["us"]
+    // "starz": ["us"]
 };
 
 //* generes available 2021-08-30
