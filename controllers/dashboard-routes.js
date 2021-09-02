@@ -38,6 +38,7 @@ router.get('/', withAuth, (req, res) => {
       },
       {
         model: Bucket
+        
       }
     ]
   })

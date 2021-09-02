@@ -12,26 +12,30 @@ Feature.init(
         primaryKey: true,
         autoIncrement: true
       },
-      title: {
-        type: DataTypes.STRING,
+      api_Id: {
+        type: DataTypes.INTEGER,
         allowNull: false
       },
-      cover_photo: {
-        type: DataTypes.STRING, 
-      },
-      cast: {
-        type: DataTypes.STRING, 
-      },
-      description: {
-        type: DataTypes.STRING,
-      },
-      feature_url: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isURL: true
-        }
-      },
+      // title: {
+      //   type: DataTypes.STRING,
+      //   allowNull: false
+      // },
+      // cover_photo: {
+      //   type: DataTypes.STRING, 
+      // },
+      // cast: {
+      //   type: DataTypes.STRING, 
+      // },
+      // description: {
+      //   type: DataTypes.STRING,
+      // },
+      // feature_url: {
+      //   type: DataTypes.STRING,
+      //   allowNull: false,
+      //   validate: {
+      //     isURL: true
+      //   }
+      // },
       user_id: {
         type: DataTypes.INTEGER,
         references: {
