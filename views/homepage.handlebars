@@ -1,121 +1,201 @@
 <div class="container">
   <div class="row">
+    <div class="bg-dark bucketPane col">
+      {{#if loggedIn}}
+
+<p>WORKS</p>
 
 
-    {{!-- Netflix --}}
-    <div class="card" style="width: 18rem;">
-      <img src="../assets/images/netflixLogo.png" alt="logo">
-      <div class="card-body">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search Netflix" aria-label="Search Netflix"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+
+      {{else}}
+      {{!-- Login Card --}}
+      <div class="card text-dark bg-dark border-light my-2">
+        <div class="card-body">
+          {{!-- Login Form --}}
+          <form class="login-form">
+            <div class="form-floating mb-1">
+              <input type="text" class="form-control" id="email-login" placeholder="name@example.com">
+              <label for="email-login">Email</label>
+            </div>
+            <div class="form-floating mb-1">
+              <input type="password" class="form-control" id="password-login" placeholder="Password">
+              <label for="password-login">Password</label>
+            </div>
+            <div class="d-grid">
+              <button class="btn btn-body text-light" type="submit">Login</button>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
+      {{!-- End Login Card --}}
 
-    {{!-- Hulu --}}
-    <div class="card" style="width: 18rem;">
-      <img src="../assets/images/huluLogo.jpeg" alt="logo">
-      <div class="card-body">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search Hulu" aria-label="Search Hulu"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+      {{!-- Sign-up Card --}}
+      <div class="card text-dark bg-dark border-light my-2">
+        <div class="card-body">
+          {{!-- Sign-up Form --}}
+          <form class="signup-form">
+            <div class="form-floating mb-1">
+              <input type="text" class="form-control" id="username-signup">
+              <label for="username-signup">Username</label>
+            </div>
+            <div class="form-floating mb-1">
+              <input type="email" class="form-control" id="email-signup" placeholder="name@example.com">
+              <label for="email-signup">Email</label>
+            </div>
+            <div class="form-floating mb-1">
+              <input type="password" class="form-control" id="password-signup" placeholder="Password">
+              <label for="password-signup">Password</label>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-body text-light" type="submit">Join BingeBucket</button>
+            </div>
+          </form>
         </div>
       </div>
+      {{!-- End Sign-up Card --}}
+      {{/if}}
+
     </div>
 
-    {{!-- Amazon Prime --}}
-    <div class="card" style="width: 18rem;">
-      <img src="../assets/images/amazonPrimeVideoLogo.jpg" alt="logo">
-      <div class="card-body">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search Prime" aria-label="Search Prime"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
+    {{!-- MainView Start --}}
+    <div class="mainView col-8 my-2">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        {{!-- Netflix --}}
+        <div class="col">
+          <div class="card h-100 bg-body">
+            <img src="../assets/images/netflixLogo.png" alt="logo">
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search Netflix" aria-label="Search Netflix"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="searchNetflixButton">></button>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {{!-- Hulu --}}
+        <div class="col">
+          <div class="card h-100 bg-body">
+            <img src="../assets/images/netflixLogo.png" alt="logo">
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search Hulu" aria-label="Search Hulu"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="searchHuluButton">></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{!-- Amazon Prime --}}
+        <div class="col">
+          <div class="card h-100 bg-body">
+            <img src="../assets/images/netflixLogo.png" alt="logo">
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search Prime" aria-label="Search Prime"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="searchPrimeButton">></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{!-- Showtime --}}
+        <div class="col">
+          <div class="card h-100 bg-body">
+            <img src="../assets/images/netflixLogo.png" alt="logo">
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search Showtime" aria-label="Search Showtime"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="searchShowtimeButton">></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{!-- Apple TV --}}
+        <div class="col">
+          <div class="card h-100 bg-body">
+            <img src="../assets/images/netflixLogo.png" alt="logo">
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search AppleTV" aria-label="Search AppleTV"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="searchAppleButton">></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {{!-- Paramount --}}
+        <div class="col">
+          <div class="card h-100 bg-body">
+            <img src="../assets/images/netflixLogo.png" alt="logo">
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search Paramount" aria-label="Search Paramount"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="searchParamountButton">></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        {{!-- Disney --}}
+        <div class="col">
+          <div class="card h-100 bg-body">
+            <img src="../assets/images/netflixLogo.png" alt="logo">
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search DisneyPlus" aria-label="Search DisneyPlus"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="searchDisneyButton">></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        {{!-- HBO --}}
+        <div class="col">
+          <div class="card h-100 bg-body">
+            <img src="../assets/images/netflixLogo.png" alt="logo">
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search HBO" aria-label="Search HBO"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="searchHBOButton">></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        {{!-- Peacock --}}
+        <div class="col">
+          <div class="card h-100 bg-body">
+            <img src="../assets/images/netflixLogo.png" alt="logo">
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search Peacock" aria-label="Search Peacock"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="searchPeacockButton">></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
-
-    {{!-- Showtime --}}
-    <div class="card" style="width: 18rem;">
-      <img src="../assets/images/showtimeLogo.jpg" alt="logo">
-      <div class="card-body">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search Showtime" aria-label="Search Showtime"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
-        </div>
-      </div>
-    </div>
-
-
-    {{!-- Apple TV --}}
-    <div class="card" style="width: 18rem;">
-      <img src="../assets/images/appleTvLogo.png" alt="logo">
-      <div class="card-body">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search AppleTV" aria-label="Search AppleTV"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
-        </div>
-      </div>
-    </div>
-
-    {{!-- Paramount --}}
-    <div class="card" style="width: 18rem;">
-      <img src="../assets/images/paramountPlusLogo.jpg" alt="logo">
-      <div class="card-body">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search Paramount" aria-label="Search Paramount"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
-        </div>
-      </div>
-    </div>
-
-    {{!-- Disney --}}
-    <div class="card" style="width: 18rem;">
-      <img src="../assets/images/disneyPlusLogo.jpg" alt="logo">
-      <div class="card-body">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search DisneyPlus" aria-label="Search DisneyPlus"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
-        </div>
-      </div>
-    </div>
-
-
-    {{!-- HBO --}}
-    <div class="card" style="width: 18rem;">
-      <img src="../assets/images/hboLogo.jpg" alt="logo">
-      <div class="card-body">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search HBO" aria-label="Search HBO"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
-        </div>
-      </div>
-    </div>
-
-    {{!-- Peacock --}}
-    <div class="card" style="width: 18rem;">
-      <img src="../assets/images/peacockLogo.jpg" alt="logo">
-      <div class="card-body">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search Peacock" aria-label="Search Peacock"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">></button>
-        </div>
-      </div>
-    </div>
-
-
-
-
   </div>
-  
 </div>
-<script src= '/javascript/streamAPI.js'></script>
+
+
+<script src="/javascript/login.js"></script>
