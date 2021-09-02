@@ -27,15 +27,15 @@ const reviewdata = [
   },
   {
     Review_text: 'review5',
-    user_id: 4,
-    feature_id: 4,
-    review_rating: 4
+    user_id: 5,
+    feature_id: 5,
+    review_rating: 5
   },
 ];
 
 console.log('Review Data');
 console.log('********************');
-console.log(reviewdata);
+// console.log(reviewdata);
 
 const seedReview = () => Review.bulkCreate(reviewdata);
 

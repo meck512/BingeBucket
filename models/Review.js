@@ -3,7 +3,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Review extends Model {}
+class Review extends Model { }
 
 Review.init(
   {
@@ -33,7 +33,7 @@ Review.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Review'
+    modelName: 'review'
   }
 );
 
