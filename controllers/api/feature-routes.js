@@ -14,6 +14,8 @@ router.get("/", (req, res) => {
     });
 });
 
+
+
 router.get("/:id", (req, res) => {
   Feature.findOne({
     where: {
@@ -28,4 +30,15 @@ router.get("/:id", (req, res) => {
     });
 });
 
+router.post('/bucket', withauth, (req,res) => {
+  Feature.create({
+    id: req.body.id,
+    imdbID: req.body.imdbID
+  })
+  .then(dbFeatureData => res.json(dbFeatureData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
 module.exports = router;

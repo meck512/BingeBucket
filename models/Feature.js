@@ -13,7 +13,7 @@ Feature.init(
       primaryKey: true,
       autoIncrement: true
     },
-    api_ID: {
+    imdbID: {
       type: DataTypes.STRING,
       allowNull: false
     }
