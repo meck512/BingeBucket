@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 var axios = require("axios").default;
 
 //Get an array of streaming series/movies
@@ -13,8 +13,8 @@ const getStreamList = async function (servicesIn) {
 		url: 'https://streaming-availability.p.rapidapi.com/search/ultra',
 		params: {
 			country: 'us',
-			// services: 'netflix,prime,disney,hbo,hulu,peacock,paramount,starz,showtime,apple,mubi',
-			services: servicesIn,
+			services: 'netflix,prime,disney,hbo,hulu,peacock,paramount,starz,showtime,apple,mubi',
+			// services: servicesIn,
 			type: 'movie',
 			order_by: 'imdb_vote_count',
 			year_min: '2000',
@@ -23,9 +23,9 @@ const getStreamList = async function (servicesIn) {
 			// genres_relation: 'or',
 			desc: 'true',
 			language: 'en',
-			min_imdb_rating: '50',
+			min_imdb_rating: '90',
 			max_imdb_rating: '100',
-			min_imdb_vote_count: '10000',
+			min_imdb_vote_count: '100000',
 			max_imdb_vote_count: '1000000'
 		},
 		headers: {
@@ -39,8 +39,8 @@ const getStreamList = async function (servicesIn) {
 		url: 'https://streaming-availability.p.rapidapi.com/search/ultra',
 		params: {
 			country: 'us',
-			// services: 'netflix,prime,disney,hbo,hulu,peacock,paramount,starz,showtime,apple,mubi',
-			services: servicesIn,
+			services: 'netflix,prime,disney,hbo,hulu,peacock,paramount,starz,showtime,apple,mubi',
+			// services: servicesIn,
 			type: 'series',
 			order_by: 'imdb_vote_count',
 			year_min: '2000',
@@ -49,9 +49,9 @@ const getStreamList = async function (servicesIn) {
 			// genres_relation: 'or',
 			desc: 'true',
 			language: 'en',
-			min_imdb_rating: '50',
+			min_imdb_rating: '90',
 			max_imdb_rating: '100',
-			min_imdb_vote_count: '10000',
+			min_imdb_vote_count: '100000',
 			max_imdb_vote_count: '1000000'
 		},
 		headers: {
@@ -67,7 +67,7 @@ const getStreamList = async function (servicesIn) {
 
 	returnCombinedData = resultDataSeriesArr.concat(resultDataMovieArr);
 
-	console.log(returnCombinedData);
+	// console.log(returnCombinedData);
 	return returnCombinedData;
 };
 
@@ -90,6 +90,6 @@ const getItemData = async function (id) {
 };
 
 
-exports.getStreamList = { getStreamList, getItemData };
+exports.getStreamList =  getStreamList, getItemData ;
 
-console.log(getStreamList('netflix'));
+// console.log(getStreamList('netflix'));

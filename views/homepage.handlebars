@@ -130,60 +130,7 @@
             </div>
           </div>
         </div>
-    {{#each streamData}}
-    <h1>Yo Sup</h1>
-<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-    {{!-- <h1>{{imdbID}}</h1> --}}
-    {{!-- <img src="{{imdbID}}" --}}
-        class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{originalTitle}}</h5>
-    </div>
-    <div class="card-body">
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="descriptionButton accordion-button collapsed bg-light" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                        aria-controls="collapseOne">
-                        Description
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        {{overview}}
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="castButton accordion-button collapsed bg-light" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                        aria-controls="collapseTwo">
-                        Cast
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">{{cast}}</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    {{!-- buttons --}}
-    <div class="card-body d-grid gap-2">
-        <button class="add2BucketButton btn btn-primary" type="button">Add to Bucket</button>
-        <!-- REVIEW Button trigger modal -->
-        <button class="reviewModalTrigger btn btn-primary" type="button" data-bs-toggle="modal"
-            data-bs-target="#reviewButtonModal">BingeBucket Reviews
-            <span class="badge bg-dark">10</span></button>
-        {{!-- link to streaming service --}}
-        <button class="platformLinkButton btn btn-primary" type="button">{{featurePlatform}}</button>
-    </div>
-</div>
-    {{/each}}
         {{!-- Hulu --}}
         <div class="col">
           <div class="card h-100 bg-body">
@@ -351,10 +298,18 @@
                   data-bs-target="#reviewButtonModal">BingeBucket Reviews
                   <span class="badge bg-dark">10</span></button> --}}
                 {{!-- link to streaming service --}}
-                <a href="{{streamingInfo.netflix.us.link}}">
-                  <div class="card-body d-grid">
+                  {{#if streamingInfo.hbo.us.link}}
+                    <a href="{{streamingInfo.hbo.us.link}}">
+                    <div class="card-body d-grid">
+                    <button class="platformLinkButton btn btn-primary" type="button">Watch on HBO</button>
+                  </div>
+                  {{/if}}
+                  {{#if streamingInfo.netflix.us.link}}
+                    <a href="{{streamingInfo.netflix.us.link}}">
+                    <div class="card-body d-grid">
                     <button class="platformLinkButton btn btn-primary" type="button">Watch on Netflix</button>
                   </div>
+                  {{/if}}
               </div>
               </a>
             </div>
