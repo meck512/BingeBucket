@@ -23,8 +23,8 @@ const getStreamListBAD = async function (servicesIn, typeIn) {
             language: 'en',
             min_imdb_rating: '80',
             max_imdb_rating: '90',
-            min_imdb_vote_count: '100000',
-            max_imdb_vote_count: '1000000'
+            min_imdb_vote_count: '10000',
+            max_imdb_vote_count: '100000'
         },
         headers: {
             'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
@@ -44,50 +44,3 @@ const getStreamListBAD = async function (servicesIn, typeIn) {
 const returnArr = getStreamList();
 
 console.log(returnArr)
-
-function netflixResultCards () {
-    document.getElementById('cardBox').innerHTML="";
-    fetch("https://streaming-availability.p.rapidapi.com/search/basic?country=us&service=netflix&type=movie&genre=18&page=1&keyword=" + userInput + "&language=en", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "streaming-availability.p.rapidapi.com",
-            "x-rapidapi-key": process.env.STREAM_API_KEY
-        }
-    })
-    .then(function (response) {
-        return response.json()
-    }).then(function (data) {
-        console.log(data)
-        for (i = 0; i < data._embedded.events.length; i++) {
-            // var concert = data._embedded.events[i]
-            let title = ;
-            let description = ;
-            let cast = ;
-            let platform = ;
-            let coverImage = ;
-            
-            getHotels(city).then(function (hotels) {
-                console.log(hotels)
-                console.log(venue, city, artistImg, date)
-                let ticketUrl = concert.url
-                var suggestion = hotels[0].name
-                var card = document.createElement("div")
-                card.classList = "card black center-align"
-                card.innerHTML = `<div class="card-content white-text">
-                <span class="card-title">`+ city + `, ` + state + `</span>
-                <p>`+ date + `</p>
-                <p>`+ venue + `</p>
-                <p>`+ address + `</p>
-                <p>Need a Hotel?  `+ suggestion + `</>
-                </div>
-                <div class="card-action">
-                <a href="`+ ticketUrl + `">Get Tickets</a>
-                </div>`
-                document.getElementById("cardBox").appendChild(card)
-        
-    })
-    
-    }
-    })
-    };
-

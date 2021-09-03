@@ -23,7 +23,7 @@ const getStreamList = async function (servicesIn, typeIn) {
 			// genres_relation: 'or',
 			desc: 'true',
 			language: 'en',
-			min_imdb_rating: '90',
+			min_imdb_rating: '50',
 			max_imdb_rating: '100',
 			min_imdb_vote_count: '10000',
 			max_imdb_vote_count: '1000000'
