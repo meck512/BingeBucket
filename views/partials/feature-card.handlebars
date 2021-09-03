@@ -1,6 +1,8 @@
 {{!-- SINGLE FEATURE CARD --}}
+    {{#each streamData}}
 <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-    <img src="{{image}}"
+        <h1>{{imdbID}}</h1>
+    <img src="{{backdropURLs}}"
         class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{featureTitle}}</h5>
@@ -49,3 +51,4 @@
         <button class="platformLinkButton btn btn-primary" type="button">{{featurePlatform}}</button>
     </div>
 </div>
+    {{/each}}
