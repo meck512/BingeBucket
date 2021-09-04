@@ -13,10 +13,18 @@ Feature.init(
       primaryKey: true,
       autoIncrement: true
     },
-    api_ID: {
+    imdb_id: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     }
+   
   },
   {
     sequelize,
