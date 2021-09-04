@@ -8,7 +8,7 @@ async function bucketFormHandler(event){
         if (bucketButton) {
             const response = await fetch('api/features/bucket', {
                 method: 'post',
-                body: JSON.stringify({
+                body: JSON.parse({
                     imdbID
                 })
             }),
