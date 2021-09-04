@@ -33,7 +33,9 @@ router.get("/:id", (req, res) => {
 router.post('/bucket', (req,res) => {
   Feature.create({
     id: req.body.id,
-    imdb_id: req.body.imdb_id
+    imdb_id: req.body.imdb_id,
+    user_id: req.session.user_id,
+    featureBucket: req.body.featureBucket
   })
   .then(dbFeatureData => res.json(dbFeatureData))
   .catch(err => {

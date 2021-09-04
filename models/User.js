@@ -42,6 +42,7 @@ User.init(
       // features : [{ featureID }]
       type: DataTypes.STRING,
       allowNull: true
+      
     }
   },
   {

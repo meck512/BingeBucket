@@ -1,8 +1,7 @@
 async function bucketFormHandler(event){
     event.preventDefault();
     console.log(event.target.dataset.imdb)
-// {{imdbid}}
-        // if (bucketButton) {
+
             const response = await fetch('api/features/bucket', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -12,13 +11,13 @@ async function bucketFormHandler(event){
                 headers: { 'Content-Type': 'application/json' }
             })
             console.log(response)
-        // }
+        
 }
 
 
 var allBuckets = document.querySelectorAll('.bucketAddition')
 allBuckets.forEach(bucket => {
     bucket.addEventListener('click', bucketFormHandler)
-})
+});
 
 

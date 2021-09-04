@@ -23,10 +23,8 @@ Feature.init(
         model: 'user',
         key: 'id'
       }
-    },
-    // api_id: {
-    //   type: DataTypes.INTEGER
-    // }
+    }
+   
   },
   {
     sequelize,
