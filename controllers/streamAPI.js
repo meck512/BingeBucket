@@ -7,26 +7,31 @@ var axios = require("axios").default;
 //typeIn = REQUIRED	'movie' OR 'series'
 //e.g. getStreamList('netflix,prime','movie')
 //e.g. getStreamList('netflix','series')
-const getStreamList = async function (servicesIn) {
+const getStreamList = async function (servicesIn,searchTextIn) {
 	var optionsMovie = {
 		method: 'GET',
 		url: 'https://streaming-availability.p.rapidapi.com/search/ultra',
+		// params: {
+		// 	country: 'us',
+		// 	services: 'netflix,hulu,prime,showtime,apple,paramount,disney,hbo,peacock',
+		// 	// services: servicesIn,
+		// 	type: 'movie',
+		// 	order_by: 'imdb_vote_count',
+		// 	year_min: '2000',
+		// 	year_max: '2020',
+		// 	page: '87',
+		// 	// genres_relation: 'or',
+		// 	desc: 'true',
+		// 	language: 'en',
+		// 	min_imdb_rating: '50',
+		// 	max_imdb_rating: '100',
+		// 	min_imdb_vote_count: '10000',
+		// 	max_imdb_vote_count: '1000000'
+		// },
 		params: {
-			country: 'us',
-			services: 'netflix,prime,disney,hbo,hulu,peacock,paramount,starz,showtime,apple,mubi',
-			// services: servicesIn,
-			type: 'movie',
-			order_by: 'imdb_vote_count',
-			year_min: '2000',
-			year_max: '2020',
-			// page: '326',
-			// genres_relation: 'or',
-			desc: 'true',
-			language: 'en',
-			min_imdb_rating: '90',
-			max_imdb_rating: '100',
-			min_imdb_vote_count: '100000',
-			max_imdb_vote_count: '1000000'
+			country: 'us', services: servicesIn,
+			page: 1, type: 'movie', order_by: 'imdb_vote_count', 
+			keyword: searchTextIn
 		},
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
@@ -37,22 +42,27 @@ const getStreamList = async function (servicesIn) {
 	var optionsSeries = {
 		method: 'GET',
 		url: 'https://streaming-availability.p.rapidapi.com/search/ultra',
+		// params: {
+		// 	country: 'us',
+		// 	services: 'netflix,hulu,prime,showtime,apple,paramount,disney,hbo,peacock',
+		// 	// services: servicesIn,
+		// 	type: 'series',
+		// 	order_by: 'imdb_vote_count',
+		// 	year_min: '2000',
+		// 	year_max: '2020',
+		// 	page: '33',
+		// 	// genres_relation: 'or',
+		// 	desc: 'true',
+		// 	language: 'en',
+		// 	min_imdb_rating: '50',
+		// 	max_imdb_rating: '100',
+		// 	min_imdb_vote_count: '10000',
+		// 	max_imdb_vote_count: '1000000'
+		// },
 		params: {
-			country: 'us',
-			services: 'netflix,prime,disney,hbo,hulu,peacock,paramount,starz,showtime,apple,mubi',
-			// services: servicesIn,
-			type: 'series',
-			order_by: 'imdb_vote_count',
-			year_min: '2000',
-			year_max: '2020',
-			// page: '326',
-			// genres_relation: 'or',
-			desc: 'true',
-			language: 'en',
-			min_imdb_rating: '90',
-			max_imdb_rating: '100',
-			min_imdb_vote_count: '100000',
-			max_imdb_vote_count: '1000000'
+			country: 'us', services: servicesIn,
+			page: 1, type: 'series', order_by: 'imdb_vote_count', 
+			keyword: searchTextIn
 		},
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
@@ -62,13 +72,11 @@ const getStreamList = async function (servicesIn) {
 
 	const resultDataMovie = await axios.request(optionsMovie);
 	const resultDataSeries = await axios.request(optionsSeries);
+
 	const resultDataMovieArr = resultDataMovie.data.results;
 	const resultDataSeriesArr = resultDataSeries.data.results;
 
-	returnCombinedData = resultDataSeriesArr.concat(resultDataMovieArr);
-
-	// console.log(returnCombinedData);
-	return returnCombinedData;
+	return resultDataSeriesArr.concat(resultDataMovieArr);
 };
 
 //Get the individual show from the API 
@@ -77,7 +85,7 @@ const getStreamList = async function (servicesIn) {
 const getItemData = async function (id) {
 	var options = {
 		method: 'GET',
-		url: 'https://streaming-availability.p.rapidapi.com/get/basic',
+		url: 'https://streaming-availability.p.rapidapi.com/get/ultra',
 		params: { tmdb_id: id },
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
@@ -86,10 +94,11 @@ const getItemData = async function (id) {
 	};
 
 	const resultData = await axios.request(options);
-	return resultData.data.results;
+	return resultData.data;
 };
 
 
-exports.getStreamList =  getStreamList, getItemData ;
+exports.getStreamList = getStreamList;
+exports.getItemData = getItemData;
 
 // console.log(getStreamList('netflix'));
