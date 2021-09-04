@@ -6,6 +6,7 @@ const searchRoutes = require('./search-routes.js');
 
 router.use('/search', searchRoutes);
 
+
 router.use('/', homeRoutes);
 
 router.use('/api', apiRoutes);

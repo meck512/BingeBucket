@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const Feature = require('./Feature');
+// const Feature = require('./Feature');
 
 class Bucket extends Model {}
 
