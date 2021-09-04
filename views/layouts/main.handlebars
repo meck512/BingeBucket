@@ -35,16 +35,59 @@
               <li class="nav-item">
                 <a class="nav-link" id="logout">Logout</a>
               </li>
-              {{else}}
-              <a class="nav-link" id="login" href="/login">Login</a>
               {{/if}}
             </ul>
+            <div class="row">
+              {{!-- Where's My Show Streaming Search Bar --}}
+              <div class="input-group mw-70">
+                <input type="text" class="form-control" id="streamFinderInput" placeholder="Stream Finder Search"
+                  aria-label="Stream Finder Search" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="streamFinderButton">></button>
+              </div>
+            </div>
           </div>
-
         </div>
       </nav>
       {{!-- Nav Bar End --}}
     </div>
+
+    <div class="row">
+      {{!-- GET ALL per service Links --}}
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid mb-3">
+          <div class="card-group">
+            <div class="card bg-body">
+              <img src="../assets/images/netflixLogo.png" class="card-img" id="getNetflix" type="button" alt="...">
+            </div>
+            <div class="card bg-body">
+              <img src="..\assets\images\HULU.png" class="card-img" id="getHulu" type="button" alt="...">
+            </div>
+            <div class="card bg-body">
+              <img src="../assets\images\AMAZON.png" class="card-img" id="getPrime" type="button" alt="...">
+            </div>
+            <div class="card bg-body">
+              <img src="../assets\images\SHOWTIME.png" class="card-img" id="getShowtime" type="button" alt="...">
+            </div>
+            <div class="card bg-body">
+              <img src="..\assets\images\APPLE.png" class="card-img" id="getApple" type="button" alt="...">
+            </div>
+            <div class="card bg-body">
+              <img src="..\assets\images\PARAMOUNT.jpg" class="card-img" id="getParamount" type="button" alt="...">
+            </div>
+            <div class="card bg-body">
+              <img src="..\assets\images\DISNEy.png" class="card-img" id="getDisney" type="button" alt="...">
+            </div>
+            <div class="card bg-body">
+              <img src="..\assets\images\HBO.jpg" class="card-img" id="getHBO" type="button" alt="...">
+            </div>
+            <div class="card bg-body">
+              <img src="../assets\images\PEACOCK.png" class="card-img" id="getPeacock" type="button" alt="...">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    {{!-- END GET ALL per service Links --}}
   </div>
 
 
@@ -54,15 +97,15 @@
   </main>
   {{!-- Main Import End --}}
 
-        {{!-- Foooter --}}
-      <div class="row mx-auto">
-        <div class="col-12 bg-dark ">
-          <footer>
-            &copy; Proudly presented by the BingeBucket Team
-          </footer>
-        </div>
-      </div>
-      {{!-- Footer End --}}
+  {{!-- Foooter --}}
+  <div class="row mx-auto">
+    <div class="col-12 bg-dark ">
+      <footer>
+        &copy; Proudly presented by the BingeBucket Team
+      </footer>
+    </div>
+  </div>
+  {{!-- Footer End --}}
 
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
