@@ -30,10 +30,10 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post('/bucket', withauth, (req,res) => {
+router.post('/bucket', (req,res) => {
   Feature.create({
     id: req.body.id,
-    imdbID: req.body.imdbID
+    imdb_id: req.body.imdb_id
   })
   .then(dbFeatureData => res.json(dbFeatureData))
   .catch(err => {

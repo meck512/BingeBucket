@@ -1,21 +1,24 @@
-
-
 async function bucketFormHandler(event){
     event.preventDefault();
-
-    const bucketButton = document.querySelector('#addBucket').addEventListener('click', event => {
+    console.log(event.target.dataset.imdb)
 // {{imdbid}}
-        if (bucketButton) {
+        // if (bucketButton) {
             const response = await fetch('api/features/bucket', {
-                method: 'post',
-                body: JSON.parse({
-                    imdbID
-                })
-            }),
-            // headers: { 'Content-Type': 'application/json' }
-        }
-    })
-
-
-
+                method: 'POST',
+                body: JSON.stringify({
+                    imdb_id: event.target.dataset.imdb
+                    
+                }),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            console.log(response)
+        // }
 }
+
+
+var allBuckets = document.querySelectorAll('.bucketAddition')
+allBuckets.forEach(bucket => {
+    bucket.addEventListener('click', bucketFormHandler)
+})
+
+

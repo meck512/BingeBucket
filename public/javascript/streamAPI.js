@@ -108,8 +108,8 @@ const getStreamListBAD = async function (servicesIn, typeIn) {
         }
     };
 
-
+}
 // getStreamList('netflix', 'series');
 // const returnArr = getStreamList();
 
-console.log(returnArr)
+// console.log(returnArr)
