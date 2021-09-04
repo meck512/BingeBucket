@@ -7,7 +7,8 @@ var axios = require("axios").default;
 //typeIn = REQUIRED	'movie' OR 'series'
 //e.g. getStreamList('netflix,prime','movie')
 //e.g. getStreamList('netflix','series')
-const getStreamList = async function (servicesIn,searchTextIn) {
+const getStreamList = async function (servicesIn, searchTextIn) {
+	console.log('in Get Stream', servicesIn, searchTextIn);
 	var optionsMovie = {
 		method: 'GET',
 		url: 'https://streaming-availability.p.rapidapi.com/search/ultra',
@@ -29,9 +30,17 @@ const getStreamList = async function (servicesIn,searchTextIn) {
 		// 	max_imdb_vote_count: '1000000'
 		// },
 		params: {
-			country: 'us', services: servicesIn,
-			page: 1, type: 'movie', order_by: 'imdb_vote_count', 
-			keyword: searchTextIn
+			country: 'us',
+			services: servicesIn,
+			type: 'movie',
+			order_by: 'imdb_rating',
+			keyword: searchTextIn,
+			language: 'en',
+			desc: 'true',
+			min_imdb_rating: '20',
+			max_imdb_rating: '100',
+			min_imdb_vote_count: '100',
+			max_imdb_vote_count: '1000000'
 		},
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
@@ -60,9 +69,17 @@ const getStreamList = async function (servicesIn,searchTextIn) {
 		// 	max_imdb_vote_count: '1000000'
 		// },
 		params: {
-			country: 'us', services: servicesIn,
-			page: 1, type: 'series', order_by: 'imdb_vote_count', 
-			keyword: searchTextIn
+			country: 'us',
+			services: servicesIn,
+			language: 'en',
+			type: 'series',
+			order_by: 'imdb_rating',
+			desc: 'true',
+			keyword: searchTextIn,
+			min_imdb_rating: '20',
+			max_imdb_rating: '100',
+			min_imdb_vote_count: '100',
+			max_imdb_vote_count: '1000000'
 		},
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
