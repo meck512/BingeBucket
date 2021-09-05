@@ -106,6 +106,8 @@ const getStreamList = async function (servicesIn, searchTextIn) {
 	resultData.sort(function (a, b) {
 		return b.imdbVoteCount - a.imdbVoteCount; //|| a.glow - b.glow;
 	});
+
+	console.log(resultData);
 	return resultData;
 };
 
@@ -116,7 +118,7 @@ const getItemData = async function (id) {
 	var options = {
 		method: 'GET',
 		url: 'https://streaming-availability.p.rapidapi.com/get/ultra',
-		params: { tmdb_id: id },
+		params: { imdb_id: id },
 		headers: {
 			'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
 			'x-rapidapi-key': process.env.STREAM_API_KEY
