@@ -36,7 +36,7 @@
   
   ![image](https://github.com/meck512/BingeBucket/blob/main/public/assets/images/front-page.PNG)
 
-  <!-- ![image](https://github.com/meck512/BingeBucket/blob/main/public/assets/images/where-to-watch.PNG) -->
+  ![image](https://github.com/meck512/BingeBucket/blob/main/public/assets/images/where-to-watch.PNG)
 
   ![image](placeholder)
     
