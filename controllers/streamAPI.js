@@ -35,11 +35,12 @@ const getStreamList = async function (servicesIn, searchTextIn) {
 			type: 'movie',
 			order_by: 'imdb_rating',
 			keyword: searchTextIn,
+			year_min: '2000',
 			language: 'en',
 			desc: 'true',
 			min_imdb_rating: '20',
 			max_imdb_rating: '100',
-			min_imdb_vote_count: '100',
+			min_imdb_vote_count: '10000',
 			max_imdb_vote_count: '1000000'
 		},
 		headers: {
@@ -76,9 +77,10 @@ const getStreamList = async function (servicesIn, searchTextIn) {
 			order_by: 'imdb_rating',
 			desc: 'true',
 			keyword: searchTextIn,
+			year_min: '2000',
 			min_imdb_rating: '20',
 			max_imdb_rating: '100',
-			min_imdb_vote_count: '100',
+			min_imdb_vote_count: '10000',
 			max_imdb_vote_count: '1000000'
 		},
 		headers: {
@@ -93,7 +95,18 @@ const getStreamList = async function (servicesIn, searchTextIn) {
 	const resultDataMovieArr = resultDataMovie.data.results;
 	const resultDataSeriesArr = resultDataSeries.data.results;
 
-	return resultDataSeriesArr.concat(resultDataMovieArr);
+	const resultData = resultDataSeriesArr.concat(resultDataMovieArr);
+	
+	for (i = 0; i < resultData.length; i++) {
+		resultData[i].imdbVoteCount = 
+		resultData[i].imdbVoteCount * 
+		resultData[i].imdbRating;
+	}
+
+	resultData.sort(function (a, b) {
+		return b.imdbVoteCount - a.imdbVoteCount; //|| a.glow - b.glow;
+	});
+	return resultData;
 };
 
 //Get the individual show from the API 

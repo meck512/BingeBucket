@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
 
 router.get('/search/:id', async (req, res) => {
   // const data = await streamData.getStreamList('netflix,hulu,prime,showtime,apple,paramount,disney,hbo,peacock');
-  const data = await streamData.getItemData("tv/71728");
+  const data = await streamData.getItemData(req.params.id);
   console.log(data);
   console.log(`
   

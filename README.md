@@ -5,7 +5,7 @@
   ## Description 
   Allows users to sort through many shows on multiple streaming services, archive their favorites, and see other users ratings.
 
-   -> [will update when we finalize our presentation in case we add/subtract things] <-
+   As an avid consumer of movie and TV streaming services, you want a way to easily find your favorite movies or TV series. Maybe your Bucket list is to watch every Avengers movie or all the Hobbit movies.  How do you find what streaming services are showing them?  The Bucket Team's Bucket List application solves that problem.  Using the Bucket List application, a user can enter a movie title or keyword into the search bar, then click on individual services and be presented a link of streaming services.  If you don't know what streaming service your program is showing, the user can simply click on the 'World' search button and search the top 9 streaming services in the US. 
   
   
   ## Table of Contents
@@ -33,11 +33,7 @@
   -> [Link to live project here] <-
   -> [gif of project in use will go here] <-
   
-  ## Tests
-  
-   -> [I'm thinking i'll just delete this section unless anyone thinks it should stay] <-
-  
-  
+    
   ## License
   
   mit

@@ -21,7 +21,7 @@ async function runSearch(userService, UserSearchText) {
                         <div id="collapseOne" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                        ` + streamData.overview + `
+                        Bucket List Response Rating: ` + streamData.imdbVoteCount + `. IMDB Rating: ` + streamData.imdbRating + `. ` + streamData.overview + `
                         </div>
                         </div>
                     </div>
