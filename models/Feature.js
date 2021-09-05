@@ -21,7 +21,7 @@ Feature.init(
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: ['id', 'featureBucket']
+        key: 'id'
       }
     }
    

@@ -53,7 +53,7 @@ if (el) {
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 }
 
-let el = document.getElementById('signupForm');
-if (el) {
+let el2 = document.getElementById('signupForm');
+if (el2) {
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 }
