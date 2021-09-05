@@ -106,6 +106,8 @@ const getStreamList = async function (servicesIn, searchTextIn) {
 	resultData.sort(function (a, b) {
 		return b.imdbVoteCount - a.imdbVoteCount; //|| a.glow - b.glow;
 	});
+
+	console.log(resultData);
 	return resultData;
 };
 
