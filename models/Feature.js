@@ -23,9 +23,11 @@ Feature.init(
         model: 'user',
         key: 'id'
       }
+    },
+    originalTitle: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
-    
-   
   },
   {
     sequelize,
