@@ -115,6 +115,7 @@ const getStreamList = async function (servicesIn, searchTextIn) {
 // Usage id is TMDb ID or an IMDb in the format of tv/71712 or movie/464052
 //e.g. getItemData('tv/66732');
 const getItemData = async function (id) {
+	console.log(id)
 	var options = {
 		method: 'GET',
 		url: 'https://streaming-availability.p.rapidapi.com/get/ultra',
