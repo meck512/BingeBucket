@@ -23,6 +23,8 @@ async function runSearch(event) {
             break;
         case 'getPeacock': serviceBtn = 'peacock'
             break;
+        case 'streamFinderButton':
+            serviceBtn = 'netflix,hulu,prime,showtime,apple,paramount,disney,hbo,peacock'
         default:
             serviceBtn = 'netflix,hulu,prime,showtime,apple,paramount,disney,hbo,peacock'
     }
@@ -42,3 +44,4 @@ document.getElementById('getDisney').addEventListener('click', runSearch);
 document.getElementById('getHBO').addEventListener('click', runSearch);
 document.getElementById('getPeacock').addEventListener('click', runSearch);
 document.getElementById('getEverywhere').addEventListener('click', runSearch);
+document.getElementById('streamFinderButton').addEventListener('click', runSearch);
