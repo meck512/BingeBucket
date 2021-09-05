@@ -12,6 +12,12 @@ Review.hasMany(Comment, {
 Comment.belongsTo(Review, {
   foreignKey: 'review_id',
 });
+User.hasMany(Feature, {
+  foreignKey: 'user_id'
+});
+Feature.belongsTo(User, {
+  foreignKey: 'user_id'
+});
 
 
 module.exports = { User, Review,  Feature, Comment };
