@@ -15,7 +15,7 @@
 
 <body class="bg-secondary text-white">
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       {{!-- Nav Bar --}}
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,10 +37,10 @@
               </li>
               {{/if}}
             </ul>
-            <div class="row">
+            <div class="row w-50">
               {{!-- Where's My Show Streaming Search Bar --}}
               <div class="input-group mw-70">
-                <input type="text" class="form-control" id="streamFinderInput" placeholder="Enter a Keyword to Search"
+                <input type="text" class="form-control" id="streamFinderInput" placeholder="Movie or Series Stream Search"
                   aria-label="Enter a keyword then click on service icon" aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary" type="button" id="streamFinderButton">></button>
               </div>
@@ -118,6 +118,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>
