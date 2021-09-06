@@ -21,9 +21,9 @@ async function runSearch(userService, UserSearchText) {
                         <div id="collapseOne" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                        Binge Bucket Rating: ` + streamData.imdbVoteCount + 
-                        `.<br/><br/> IMDB Rating: ` + streamData.imdbRating + 
-                        `. <br/><br/>` + streamData.overview + `
+                        Binge Bucket Rating: ` + streamData.imdbVoteCount +
+            `.<br/><br/> IMDB Rating: ` + streamData.imdbRating +
+            `. <br/><br/>` + streamData.overview + `
                         </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@ async function runSearch(userService, UserSearchText) {
             `
         }
 
-        return headerCard + serviceButton + "</div> </div>";
+        return headerCard + serviceButton + "</div> </div> </div>";
 
     };
 
@@ -160,7 +160,12 @@ async function runSearch(userService, UserSearchText) {
         };
 
         var card = document.createElement("div");
-       
+        // <div id="start-cards" class="row row-cols-1 row-cols-md-3 g-4"></div>
+        card.classList = "row row-cols-1 row-cols-md-3 g-4";
+      
+
+
+
         card.innerHTML = cardHTML;
         document.getElementById("start-cards").appendChild(card)
 
@@ -168,7 +173,7 @@ async function runSearch(userService, UserSearchText) {
         allBuckets.forEach(bucket => {
             bucket.addEventListener('click', bucketFormHandler)
         });
-    
+
     })
 };
 
