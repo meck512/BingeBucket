@@ -1,14 +1,10 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="bg-dark min-vh-100 bucketPane col">
-
-
-
+    <div class="bg-dark min-vh-100 bucketPane col-3">
       {{#if loggedIn}}
       <div class="card-body d-grid gap-2">
-        <button class="add2BucketButton btn btn-light border-light" type="button"><strong>My Bucket</strong></button>
+        <button class="add2BucketButton btn btn-dark border-light" type="button">Click on a streaming service to see a current stream list, or search a title to see where it's available!</button>
       </div>
-
       <div class="card-body">
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
@@ -19,11 +15,11 @@
                 My Bucket
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingOne"
+            <div id="collapseOne" class="accordion-collapse collapse bg-dark" aria-labelledby="headingOne"
               data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <div id="bucketList" class="card-body d-grid gap-2">
-
+                <div id="bucketList" class="card-body d-grid gap-1">
+                  <button class="add2BucketButton btn btn-secondary" type="button">Sweet Girl</button>
                 </div>
               </div>
             </div>
@@ -31,19 +27,13 @@
         </div>
       </div>
 
-
-      <div class="card-body d-grid gap-2">
-        <button class="add2BucketButton btn btn-dark border-light" type="button">Scroll Down To Choose <br />From
-          Today's Popular
-          Titles!<br /><br />Or Use The Search Options Above</button>
-      </div>
       {{else}}
       <div class="card-body d-grid gap-2">
         <button class="add2BucketButton btn btn-dark border-light" type="button">Welcome to Binge
           Bucket!<br /><br />Create an account and/or Login.<br />Then begin searching!<br />Create your
           personalized<br />BINGE BUCKET now!</button>
       </div>
-      <br />
+
       {{!-- Login Card --}}
       <div class="card text-dark bg-dark border-light my-2">
         <div class="card-body">
@@ -94,9 +84,10 @@
     </div>
 
     {{!-- MainView Start --}}
-    <div class="mainView col-8 my-2">
+    <div class="mainView col-9 my-2">
       <div id="cardBox">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
           {{#each streamData}}
           <div class="col">
             <div class="card text-white bg-dark mb-1" style="max-width: 18rem;">
@@ -138,74 +129,74 @@
                 </div>
               </div>
               {{!-- buttons --}}
-              <div class="card-body d-grid gap-2">
-                <button class="add2BucketButton btn btn-primary bucketAddition" data-imdb="{{imdbID}}"
+              <div class="card-body d-grid gap-1">
+                <button class="add2BucketButton btn btn-dark border-light bucketAddition" data-imdb="{{imdbID}}"
                   data-originalTitle="{{originalTitle}}" type="button">Add to Bucket</button>
                 {{!-- link to streaming service --}}
                 {{#if streamingInfo.netflix.us.link}}
-                <div class="card-body d-grid">
-                  <button class="platformLinkButton btn btn-primary" type="button"
+               
+                  <button class="platformLinkButton btn btn-dark border-light" type="button"
                     href="{{streamingInfo.netflix.us.link}}">Watch on Netflix</button>
-                </div>
+              
                 {{/if}}
                 {{#if streamingInfo.hulu.us.link}}
 
-                <div class="card-body d-grid">
-                  <button class="platformLinkButton btn btn-primary" type="button"
+        
+                  <button class="platformLinkButton btn btn-dark border-light" type="button"
                     href="{{streamingInfo.hulu.us.link}}">Watch on Hulu</button>
-                </div>
+           
                 {{/if}}
                 {{#if streamingInfo.prime.us.link}}
 
-                <div class="card-body d-grid">
-                  <button class="platformLinkButton btn btn-primary" type="button"
+             
+                  <button class="platformLinkButton btn btn-dark border-light" type="button"
                     href="{{streamingInfo.prime.us.link}}">Watch on Prime</button>
-                </div>
+           
                 {{/if}}
                 {{#if streamingInfo.showtime.us.link}}
 
-                <div class="card-body d-grid">
-                  <button class="platformLinkButton btn btn-primary" type="button"
+             
+                  <button class="platformLinkButton btn btn-dark border-light" type="button"
                     href="{{streamingInfo.showtime.us.link}}">Watch on Showtime</button>
-                </div>
+            
                 {{/if}}
                 {{#if streamingInfo.apple.us.link}}
 
-                <div class="card-body d-grid">
-                  <button class="platformLinkButton btn btn-primary" type="button"
+        
+                  <button class="platformLinkButton btn btn-dark border-light" type="button"
                     href="{{streamingInfo.apple.us.link}}">Watch on Apple</button>
-                </div>
+             
                 {{/if}}
                 {{#if streamingInfo.paramount.us.link}}
 
-                <div class="card-body d-grid">
-                  <button class="platformLinkButton btn btn-primary" type="button"
+             
+                  <button class="platformLinkButton btn btn-dark border-light" type="button"
                     href="{{streamingInfo.paramount.us.link}}">Watch on
                     Paramount</button>
-                </div>
+           
                 {{/if}}
                 {{#if streamingInfo.disney.us.link}}
 
-                <div class="card-body d-grid">
-                  <button class="platformLinkButton btn btn-primary" type="button"
+         
+                  <button class="platformLinkButton btn btn-dark border-light" type="button"
                     href="{{streamingInfo.disney.us.link}}">Watch on
                     Disney</button>
-                </div>
+           
                 {{/if}}
                 {{#if streamingInfo.hbo.us.link}}
 
-                <div class="card-body d-grid">
-                  <button class="platformLinkButton btn btn-primary" type="button"
+           
+                  <button class="platformLinkButton btn btn-dark border-light" type="button"
                     href="{{streamingInfo.hbo.us.link}}">Watch on HBO</button>
-                </div>
+         
                 {{/if}}
                 {{#if streamingInfo.peacock.us.link}}
 
-                <div class="card-body d-grid">
-                  <button class="platformLinkButton btn btn-primary" type="button"
+      
+                  <button class="platformLinkButton btn btn-dark border-light" type="button"
                     href="{{streamingInfo.peacock.us.link}}">Watch on
                     Peacock</button>
-                </div>
+    
                 {{/if}}
               </div>
 
