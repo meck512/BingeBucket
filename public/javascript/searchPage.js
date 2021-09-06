@@ -3,7 +3,7 @@ async function runSearch(userService, UserSearchText) {
     function buildHTMLCard(streamData) {
         const headerCard = `
                 <div class="col">
-                <div class="card text-white bg-dark mb-3 my-3" style="max-width: 18rem;">
+                <div class="card text-white bg-dark mb-1" style="max-width: 18rem;">
                 <img src="` + streamData.posterURLs.original + `" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">` + streamData.originalTitle + `</h5>
@@ -45,7 +45,7 @@ async function runSearch(userService, UserSearchText) {
 
                 <div class="card-body d-grid gap-2">
 
-                <button class="add2BucketButton btn btn-primary bucketAddition" data-imdb="`+ streamData.imdbID + 
+                <button class="add2BucketButton btn btn-dark border-light bucketAddition" data-imdb="`+ streamData.imdbID + 
                 `" data-originalTitle="` + streamData.originalTitle + `" type="button">Add to Bucket</button>
 
                 `
@@ -55,7 +55,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                     
-                    <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.netflix.us.link + `">Watch on Netflix</button>
+                    <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.netflix.us.link + `">Watch on Netflix</button>
                     
 
             `
@@ -65,8 +65,8 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                 
-                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.hulu.us.link + `">Watch on Hulu</button>
-                    <
+                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.hulu.us.link + `">Watch on Hulu</button>
+                    
             `
         }
 
@@ -74,7 +74,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                     
-                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.prime.us.link + `">Watch on Prime</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.prime.us.link + `">Watch on Prime</button>
                     
                
             `
@@ -84,7 +84,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                    
-                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.showtime.us.link + `">Watch on Showtime</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.showtime.us.link + `">Watch on Showtime</button>
                   
             `
         }
@@ -93,7 +93,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                     
-                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.apple.us.link + `">Watch on Apple</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.apple.us.link + `">Watch on Apple</button>
                    
             `
         }
@@ -102,7 +102,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                     
-                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.paramount.us.link + `">Watch on Paramount</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.paramount.us.link + `">Watch on Paramount</button>
                   
             `
         }
@@ -111,7 +111,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                   
-                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.disney.us.link + `">Watch on Disney</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.disney.us.link + `">Watch on Disney</button>
                     
             `
         }
@@ -119,11 +119,7 @@ async function runSearch(userService, UserSearchText) {
         if (!(typeof streamData.streamingInfo.hbo === 'undefined')) {
             serviceButton = serviceButton +
                 `
-         
-                   
-                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.hbo.us.link + `">Watch on HBO</button>
-                  
-          
+                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.hbo.us.link + `">Watch on HBO</button>
             `
         }
 
@@ -161,7 +157,7 @@ async function runSearch(userService, UserSearchText) {
 
         var card = document.createElement("div");
         // <div id="start-cards" class="row row-cols-1 row-cols-md-3 g-4"></div>
-        card.classList = "row row-cols-1 row-cols-md-3 g-4";
+        card.classList = "row row-cols-1 row-cols-md-4 g-4";
       
 
 
