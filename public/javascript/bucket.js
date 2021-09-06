@@ -1,17 +1,18 @@
-async function bucketFormHandler(event){
+async function bucketFormHandler(event) {
     event.preventDefault();
-    console.log(event.target.dataset.imdb)
+    console.log(event.target.dataset.imdb);
+    console.log(event.target.dataset.originaltitle);
 
-            const response = await fetch('api/features/bucket', {
-                method: 'POST',
-                body: JSON.stringify({
-                    imdb_id: event.target.dataset.imdb
-                    
-                }),
-                headers: { 'Content-Type': 'application/json' }
-            })
-            console.log(response)
-        
+    const response = await fetch('api/features/bucket', {
+        method: 'POST',
+        body: JSON.stringify({
+            imdb_id: event.target.dataset.imdb,
+            originalTitle: event.target.dataset.originaltitle
+        }),
+        headers: { 'Content-Type': 'application/json' }
+    })
+
+
 }
 
 

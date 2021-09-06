@@ -21,7 +21,9 @@ async function runSearch(userService, UserSearchText) {
                         <div id="collapseOne" class="accordion-collapse collapse bg-secondary" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                        Bucket List Response Rating: ` + streamData.imdbVoteCount + `. IMDB Rating: ` + streamData.imdbRating + `. ` + streamData.overview + `
+                        Binge Bucket Rating: ` + streamData.imdbVoteCount +
+            `.<br/><br/> IMDB Rating: ` + streamData.imdbRating +
+            `. <br/><br/>` + streamData.overview + `
                         </div>
                         </div>
                     </div>
@@ -42,11 +44,11 @@ async function runSearch(userService, UserSearchText) {
                 </div>
 
                 <div class="card-body d-grid gap-2">
-                <button class="add2BucketButton btn btn-primary bucketAddition" data-imdb=`+ streamData.imdbID + ` type="button">Add to Bucket</button>
+                <button class="add2BucketButton btn btn-primary bucketAddition" data-imdb="`+ streamData.imdbID +
+            `" data-originalTitle="` + streamData.originalTitle + `" type="button">Add to Bucket</button>
                 `
-        let serviceButton = ""
-        // for (i = 0; i < streamData.streamingInfo.length; i++) {
 
+        let serviceButton = ""
         if (!(typeof streamData.streamingInfo.netflix === 'undefined')) {
             serviceButton = serviceButton +
                 `
@@ -156,9 +158,15 @@ async function runSearch(userService, UserSearchText) {
         };
 
         var card = document.createElement("div");
-       
+
         card.innerHTML = cardHTML;
         document.getElementById("start-cards").appendChild(card)
+
+        var allBuckets = document.querySelectorAll('.bucketAddition')
+        allBuckets.forEach(bucket => {
+            bucket.addEventListener('click', bucketFormHandler)
+        });
+
     })
 };
 
