@@ -1,5 +1,5 @@
 {
-  "name": "BingeBucket",
+  "name": "binge-bucket",
   "version": "1.0.0",
   "description": "![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)",
   "main": "server.js",

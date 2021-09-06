@@ -19,7 +19,7 @@
               data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <div id="bucketList" class="card-body d-grid gap-1">
-                  <button class="add2BucketButton btn btn-secondary" type="button">Sweet Girl</button>
+                  
                 </div>
               </div>
             </div>
@@ -135,67 +135,64 @@
                 {{!-- link to streaming service --}}
                 {{#if streamingInfo.netflix.us.link}}
                
-                  <button class="platformLinkButton btn btn-dark border-light" type="button"
-                    href="{{streamingInfo.netflix.us.link}}">Watch on Netflix</button>
+                  <button class="platformLinkButton btn btn-dark border-light" type="button">
+                    <a class="btn-dark" href="{{streamingInfo.netflix.us.link}}" style="text-decoration: none">Watch on Netflix</a></button>
               
                 {{/if}}
                 {{#if streamingInfo.hulu.us.link}}
 
         
-                  <button class="platformLinkButton btn btn-dark border-light" type="button"
-                    href="{{streamingInfo.hulu.us.link}}">Watch on Hulu</button>
+                  <button class="platformLinkButton btn btn-dark border-light" type="button">
+                    <a class="btn-dark" href="{{streamingInfo.hulu.us.link}}" style="text-decoration: none">Watch on Hulu</a></button></a>
            
                 {{/if}}
                 {{#if streamingInfo.prime.us.link}}
 
              
-                  <button class="platformLinkButton btn btn-dark border-light" type="button"
-                    href="{{streamingInfo.prime.us.link}}">Watch on Prime</button>
+                  <button class="platformLinkButton btn btn-dark border-light" type="button">
+                    <a class="btn-dark" href="{{streamingInfo.prime.us.link}}" style="text-decoration: none">Watch on Prime</a></button>
            
                 {{/if}}
                 {{#if streamingInfo.showtime.us.link}}
 
              
-                  <button class="platformLinkButton btn btn-dark border-light" type="button"
-                    href="{{streamingInfo.showtime.us.link}}">Watch on Showtime</button>
+                  <button class="platformLinkButton btn btn-dark border-light" type="button">
+                    <a class="btn-dark" href="{{streamingInfo.showtime.us.link}}" style="text-decoration: none">Watch on Showtime</a></button>
             
                 {{/if}}
                 {{#if streamingInfo.apple.us.link}}
 
         
-                  <button class="platformLinkButton btn btn-dark border-light" type="button"
-                    href="{{streamingInfo.apple.us.link}}">Watch on Apple</button>
+                  <button class="platformLinkButton btn btn-dark border-light" type="button">
+                    <a class="btn-dark" href="{{streamingInfo.apple.us.link}}" style="text-decoration: none">Watch on Apple</a></button>
              
                 {{/if}}
                 {{#if streamingInfo.paramount.us.link}}
 
              
-                  <button class="platformLinkButton btn btn-dark border-light" type="button"
-                    href="{{streamingInfo.paramount.us.link}}">Watch on
-                    Paramount</button>
+                  <button class="platformLinkButton btn btn-dark border-light" type="button">
+                    <a class="btn-dark" href="{{streamingInfo.paramount.us.link}}" style="text-decoration: none">Watch on Paramount</a></button>
            
                 {{/if}}
                 {{#if streamingInfo.disney.us.link}}
 
          
-                  <button class="platformLinkButton btn btn-dark border-light" type="button"
-                    href="{{streamingInfo.disney.us.link}}">Watch on
-                    Disney</button>
+                  <button class="platformLinkButton btn btn-dark border-light" type="button">
+                    <a class="btn-dark" href="{{streamingInfo.disney.us.link}}" style="text-decoration: none">Watch on Disney</a></button>
            
                 {{/if}}
                 {{#if streamingInfo.hbo.us.link}}
 
            
-                  <button class="platformLinkButton btn btn-dark border-light" type="button"
-                    href="{{streamingInfo.hbo.us.link}}">Watch on HBO</button>
+                  <button class="platformLinkButton btn btn-dark border-light" type="button">
+                    <a class="btn-dark" href="{{streamingInfo.hbo.us.link}}" style="text-decoration: none">Watch on HBO</a></button>
          
                 {{/if}}
                 {{#if streamingInfo.peacock.us.link}}
 
       
-                  <button class="platformLinkButton btn btn-dark border-light" type="button"
-                    href="{{streamingInfo.peacock.us.link}}">Watch on
-                    Peacock</button>
+                  <button class="platformLinkButton btn btn-dark border-light" type="button">
+                    <a class="btn-dark" href="{{streamingInfo.peacock.us.link}}" style="text-decoration: none">Watch on Peacock</a></button>
     
                 {{/if}}
               </div>

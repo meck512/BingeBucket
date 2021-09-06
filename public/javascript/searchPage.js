@@ -55,7 +55,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                     
-                    <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.netflix.us.link + `">Watch on Netflix</button>
+                    <button class="platformLinkButton btn btn-dark border-light" type="button"><a class="btn-dark"  href="`+ streamData.streamingInfo.netflix.us.link + `" style="text-decoration: none">Watch on Netflix</a></button>
                     
 
             `
@@ -65,7 +65,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                 
-                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.hulu.us.link + `">Watch on Hulu</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button"><a class="btn-dark"  href="`+ streamData.streamingInfo.hulu.us.link + `" style="text-decoration: none">Watch on Hulu</a></button>
                     
             `
         }
@@ -74,7 +74,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                     
-                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.prime.us.link + `">Watch on Prime</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button"><a class="btn-dark"  href="`+ streamData.streamingInfo.prime.us.link + `" style="text-decoration: none">Watch on Prime</a></button>
                     
                
             `
@@ -84,7 +84,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                    
-                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.showtime.us.link + `">Watch on Showtime</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button"><a class="btn-dark"  href="`+ streamData.streamingInfo.showtime.us.link + `" style="text-decoration: none">Watch on Showtime</a></button>
                   
             `
         }
@@ -93,7 +93,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                     
-                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.apple.us.link + `">Watch on Apple</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button"><a class="btn-dark"  href="`+ streamData.streamingInfo.apple.us.link + `" style="text-decoration: none">Watch on Apple</a></button>
                    
             `
         }
@@ -102,7 +102,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                     
-                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.paramount.us.link + `">Watch on Paramount</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button"><a class="btn-dark"  href="`+ streamData.streamingInfo.paramount.us.link + `" style="text-decoration: none">Watch on Paramount</a></button>
                   
             `
         }
@@ -111,7 +111,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
                   
-                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.disney.us.link + `">Watch on Disney</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button"><a class="btn-dark"  href="`+ streamData.streamingInfo.disney.us.link + `" style="text-decoration: none">Watch on Disney</a></button>
                     
             `
         }
@@ -119,7 +119,7 @@ async function runSearch(userService, UserSearchText) {
         if (!(typeof streamData.streamingInfo.hbo === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                        <button class="platformLinkButton btn btn-dark border-light" type="button" href="`+ streamData.streamingInfo.hbo.us.link + `">Watch on HBO</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button"><a class="btn-dark"  href="`+ streamData.streamingInfo.hbo.us.link + `" style="text-decoration: none">Watch on HBO</a></button>
             `
         }
 
@@ -127,7 +127,7 @@ async function runSearch(userService, UserSearchText) {
             serviceButton = serviceButton +
                 `
            
-                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.peacock.us.link + `">Watch on Peacock</button>
+                        <button class="platformLinkButton btn btn-dark border-light" type="button"><a class="btn-dark"  href="`+ streamData.streamingInfo.peacock.us.link + `" style="text-decoration: none">Watch on Peacock</a></button>
                   
             `
         }
