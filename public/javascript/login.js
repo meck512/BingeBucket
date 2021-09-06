@@ -51,9 +51,18 @@ async function signupFormHandler(event) {
 let el = document.getElementById('logonForm');
 if (el) {
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-}
-
-let el2 = document.getElementById('signupForm');
-if (el2) {
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+
+  var addToBucket = document.querySelectorAll('.bucketAddition')
+  addToBucket.forEach(bucket => {
+    console.log(bucket);
+    bucket.style.display = "none"
+  });
+
+  var searchServices = document.querySelectorAll('.bg-body')
+  searchServices.forEach(search => {
+    console.log(search);
+    search.style.display = "none"
+  });
+
 }

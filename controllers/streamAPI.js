@@ -4,11 +4,13 @@ var axios = require("axios").default;
 //Get an array of streaming series/movies
 //servicesIn = REQUIRED one or more of the following:
 //'netflix,prime,disney,hbo,hulu,peacock,paramount,starz,showtime,apple,mubi'
-//typeIn = REQUIRED	'movie' OR 'series'
-//e.g. getStreamList('netflix,prime','movie')
-//e.g. getStreamList('netflix','series')
+//
+//searchTextIn = optional user keyword such as "Harry Potter"
+//
+//e.g. getStreamList('netflix,prime','Harry Potter')
+//e.g. getStreamList('netflix','')
 const getStreamList = async function (servicesIn, searchTextIn) {
-	console.log('in Get Stream', servicesIn, searchTextIn);
+	console.log('in Get Stream ', servicesIn, searchTextIn);
 	var optionsMovie = {
 		method: 'GET',
 		url: 'https://streaming-availability.p.rapidapi.com/search/ultra',
@@ -107,13 +109,13 @@ const getStreamList = async function (servicesIn, searchTextIn) {
 		return b.imdbVoteCount - a.imdbVoteCount; //|| a.glow - b.glow;
 	});
 
-	console.log(resultData);
+	// console.log(resultData);
 	return resultData;
 };
 
 //Get the individual show from the API 
-// Usage id is TMDb ID or an IMDb in the format of tv/71712 or movie/464052
-//e.g. getItemData('tv/66732');
+// Usage id is IMDb 
+//e.g. getItemData('tt4154796'); for "Avengers: Endgame"
 const getItemData = async function (id) {
 	console.log(id)
 	var options = {
@@ -133,5 +135,3 @@ const getItemData = async function (id) {
 
 exports.getStreamList = getStreamList;
 exports.getItemData = getItemData;
-
-// console.log(getStreamList('netflix'));
