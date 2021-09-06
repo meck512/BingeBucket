@@ -42,7 +42,7 @@
   ## Usage 
   How do you get your entertainment?  If you are like many others out there you've found yourself searching over multiple platforms looking for that movie you saw as a kid, or  chasing after a series that seems to jump platform to platorm.  Binge Bucket is here to help you out of the app switching loop.  Binge Bucket allows its users to search over all of the major streaming appliactions locating their favorites and saving them to their very own bucket to binge on no matter where they may be streaming.
   
-  ![here is a live link to the project](https://mysterious-lowlands-87341.herokuapp.com/)
+  ![here is a live link to the project](https://arcane-plateau-68578.herokuapp.com/)
 
   ![app links to sites](https://github.com/meck512/BingeBucket/blob/main/public/assets/images/app-link-to-site.gif)
   
