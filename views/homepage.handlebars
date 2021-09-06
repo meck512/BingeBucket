@@ -167,64 +167,72 @@
                   data-originalTitle="{{originalTitle}}" type="button">Add to Bucket</button>
                 {{!-- link to streaming service --}}
                 {{#if streamingInfo.netflix.us.link}}
-                <a href="{{streamingInfo.netflix.us.link}}">
-                  <div class="card-body d-grid">
-                    <button class="platformLinkButton btn btn-primary" type="button">Watch on Netflix</button>
-                  </div>
-                  {{/if}}
-                  {{#if streamingInfo.hulu.us.link}}
-                  <a href="{{streamingInfo.hulu.us.link}}">
-                    <div class="card-body d-grid">
-                      <button class="platformLinkButton btn btn-primary" type="button">Watch on Hulu</button>
-                    </div>
-                    {{/if}}
-                    {{#if streamingInfo.prime.us.link}}
-                    <a href="{{streamingInfo.prime.us.link}}">
-                      <div class="card-body d-grid">
-                        <button class="platformLinkButton btn btn-primary" type="button">Watch on Prime</button>
-                      </div>
-                      {{/if}}
-                      {{#if streamingInfo.showtime.us.link}}
-                      <a href="{{streamingInfo.showtime.us.link}}">
-                        <div class="card-body d-grid">
-                          <button class="platformLinkButton btn btn-primary" type="button">Watch on Showtime</button>
-                        </div>
-                        {{/if}}
-                        {{#if streamingInfo.apple.us.link}}
-                        <a href="{{streamingInfo.apple.us.link}}">
-                          <div class="card-body d-grid">
-                            <button class="platformLinkButton btn btn-primary" type="button">Watch on Apple</button>
-                          </div>
-                          {{/if}}
-                          {{#if streamingInfo.paramount.us.link}}
-                          <a href="{{streamingInfo.paramount.us.link}}">
-                            <div class="card-body d-grid">
-                              <button class="platformLinkButton btn btn-primary" type="button">Watch on
-                                Paramount</button>
-                            </div>
-                            {{/if}}
-                            {{#if streamingInfo.disney.us.link}}
-                            <a href="{{streamingInfo.disney.us.link}}">
-                              <div class="card-body d-grid">
-                                <button class="platformLinkButton btn btn-primary" type="button">Watch on
-                                  Disney</button>
-                              </div>
-                              {{/if}}
-                              {{#if streamingInfo.hbo.us.link}}
-                              <a href="{{streamingInfo.hbo.us.link}}">
-                                <div class="card-body d-grid">
-                                  <button class="platformLinkButton btn btn-primary" type="button">Watch on HBO</button>
-                                </div>
-                                {{/if}}
-                                {{#if streamingInfo.peacock.us.link}}
-                                <a href="{{streamingInfo.peacock.us.link}}">
-                                  <div class="card-body d-grid">
-                                    <button class="platformLinkButton btn btn-primary" type="button">Watch on
-                                      Peacock</button>
-                                  </div>
-                                  {{/if}}
+                <div class="card-body d-grid">
+                  <button class="platformLinkButton btn btn-primary" type="button"
+                    href="{{streamingInfo.netflix.us.link}}">Watch on Netflix</button>
+                </div>
+                {{/if}}
+                {{#if streamingInfo.hulu.us.link}}
+
+                <div class="card-body d-grid">
+                  <button class="platformLinkButton btn btn-primary" type="button"
+                    href="{{streamingInfo.hulu.us.link}}">Watch on Hulu</button>
+                </div>
+                {{/if}}
+                {{#if streamingInfo.prime.us.link}}
+
+                <div class="card-body d-grid">
+                  <button class="platformLinkButton btn btn-primary" type="button"
+                    href="{{streamingInfo.prime.us.link}}">Watch on Prime</button>
+                </div>
+                {{/if}}
+                {{#if streamingInfo.showtime.us.link}}
+
+                <div class="card-body d-grid">
+                  <button class="platformLinkButton btn btn-primary" type="button"
+                    href="{{streamingInfo.showtime.us.link}}">Watch on Showtime</button>
+                </div>
+                {{/if}}
+                {{#if streamingInfo.apple.us.link}}
+
+                <div class="card-body d-grid">
+                  <button class="platformLinkButton btn btn-primary" type="button"
+                    href="{{streamingInfo.apple.us.link}}">Watch on Apple</button>
+                </div>
+                {{/if}}
+                {{#if streamingInfo.paramount.us.link}}
+
+                <div class="card-body d-grid">
+                  <button class="platformLinkButton btn btn-primary" type="button"
+                    href="{{streamingInfo.paramount.us.link}}">Watch on
+                    Paramount</button>
+                </div>
+                {{/if}}
+                {{#if streamingInfo.disney.us.link}}
+
+                <div class="card-body d-grid">
+                  <button class="platformLinkButton btn btn-primary" type="button"
+                    href="{{streamingInfo.disney.us.link}}">Watch on
+                    Disney</button>
+                </div>
+                {{/if}}
+                {{#if streamingInfo.hbo.us.link}}
+
+                <div class="card-body d-grid">
+                  <button class="platformLinkButton btn btn-primary" type="button"
+                    href="{{streamingInfo.hbo.us.link}}">Watch on HBO</button>
+                </div>
+                {{/if}}
+                {{#if streamingInfo.peacock.us.link}}
+
+                <div class="card-body d-grid">
+                  <button class="platformLinkButton btn btn-primary" type="button"
+                    href="{{streamingInfo.peacock.us.link}}">Watch on
+                    Peacock</button>
+                </div>
+                {{/if}}
               </div>
-              </a>
+
             </div>
           </div>
           {{/each}}

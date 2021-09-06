@@ -134,7 +134,7 @@ async function runSearch(userService, UserSearchText) {
             `
         }
 
-        return headerCard + serviceButton + "</div> </div>";
+        return headerCard + serviceButton + "</div> </div> </div>";
 
     };
 
@@ -158,6 +158,11 @@ async function runSearch(userService, UserSearchText) {
         };
 
         var card = document.createElement("div");
+        // <div id="start-cards" class="row row-cols-1 row-cols-md-3 g-4"></div>
+        card.classList = "row row-cols-1 row-cols-md-3 g-4";
+      
+
+
 
         card.innerHTML = cardHTML;
         document.getElementById("start-cards").appendChild(card)
