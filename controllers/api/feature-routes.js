@@ -4,8 +4,9 @@ const { User, Feature, Comment, Review } = require("../../models");
 
 router.get("/", (req, res) => {
   Feature.findAll({
-
-
+    where: {
+      id: req.params.id,
+    }
   })
     .then((dbFeatureData) => res.json(dbFeatureData))
     .catch((err) => {
