@@ -44,8 +44,10 @@ async function runSearch(userService, UserSearchText) {
                 </div>
 
                 <div class="card-body d-grid gap-2">
-                <button class="add2BucketButton btn btn-primary bucketAddition" data-imdb="`+ streamData.imdbID +
-            `" data-originalTitle="` + streamData.originalTitle + `" type="button">Add to Bucket</button>
+
+                <button class="add2BucketButton btn btn-primary bucketAddition" data-imdb="`+ streamData.imdbID + 
+                `" data-originalTitle="` + streamData.originalTitle + `" type="button">Add to Bucket</button>
+
                 `
 
         let serviceButton = ""
