@@ -17,18 +17,30 @@
   
   ## Installation
 ```
+(live link below, to view locally)
+* clone the repo from your terminal 
 * npm init -y
-* npm install axios
-* npm install express
-* npm install mysql2
-* npm install sequelize 
-* npm install dotenv
-* npm install express-handlebars
-* npm install express-session connect-session-sequelize
-* npm install bcrypt
+* npm install (or npm i)
+    npm i will install:
+      * npm init -y
+      * npm install axios
+      * npm install express
+      * npm install mysql2
+      * npm install sequelize 
+      * npm install dotenv
+      * npm install express-handlebars
+      * npm install express-session connect-session-sequelize
+      * npm install bcrypt
+* create an .env file including 
+  DB_NAME='binge_bucket_db'
+  DB_USER='root'
+  DB_PW='Your password here'
+  STREAM_API_KEY = "Requires you have your own API key"
+* node server.js
+* from browser -  localhost:3001
 ```  
   ## Usage 
-  How do you get your entertainment?  If you are like many others out there you've found yourself searching over multiple platforms looking for that movie you saw as a kid, or  chasing after a series that seems to jump platform to platorm.  Binge Bucket is here to help you out of the app switching loop.  Binge Bucket allows its users to search over all of the major streaming appliactions locating their favorites and leaving reviews for others to see and respond to.
+  How do you get your entertainment?  If you are like many others out there you've found yourself searching over multiple platforms looking for that movie you saw as a kid, or  chasing after a series that seems to jump platform to platorm.  Binge Bucket is here to help you out of the app switching loop.  Binge Bucket allows its users to search over all of the major streaming appliactions locating their favorites and saving them to their very own bucket to binge on no matter where they may be streaming.
   
   ![here is a live link to the project](https://mysterious-lowlands-87341.herokuapp.com/)
 
