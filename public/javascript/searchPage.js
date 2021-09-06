@@ -42,7 +42,7 @@ async function runSearch(userService, UserSearchText) {
                 </div>
 
                 <div class="card-body d-grid gap-2">
-                <button class="add2BucketButton btn btn-primary bucketAddition" data-imdb=`+ streamData.imdbID +` type="button">Add to Bucket</button>
+                <button class="add2BucketButton btn btn-primary bucketAddition" data-imdb=`+ streamData.imdbID + ` type="button">Add to Bucket</button>
                 `
         let serviceButton = ""
         // for (i = 0; i < streamData.streamingInfo.length; i++) {
@@ -50,103 +50,89 @@ async function runSearch(userService, UserSearchText) {
         if (!(typeof streamData.streamingInfo.netflix === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                <a href="`+ streamData.streamingInfo.netflix.us.link + `">
-                    <div class="card-body d-grid">
-                    <button class="platformLinkButton btn btn-primary" type="button">Watch on Netflix</button>
-                    </div>
-                </a>
+                    
+                    <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.netflix.us.link + `">Watch on Netflix</button>
+                    
+
             `
         };
 
         if (!(typeof streamData.streamingInfo.hulu === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                <a href="`+ streamData.streamingInfo.hulu.us.link + `">
-                    <div class="card-body d-grid">
-                        <button class="platformLinkButton btn btn-primary" type="button">Watch on Hulu</button>
-                    </div>
-                </a>
+                
+                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.hulu.us.link + `">Watch on Hulu</button>
+                    <
             `
         }
 
         if (!(typeof streamData.streamingInfo.prime === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                <a href="`+ streamData.streamingInfo.prime.us.link + `">
-                    <div class="card-body d-grid">
-                        <button class="platformLinkButton btn btn-primary" type="button">Watch on Prime</button>
-                    </div>
-                </a>
+                    
+                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.prime.us.link + `">Watch on Prime</button>
+                    
+               
             `
         }
 
         if (!(typeof streamData.streamingInfo.showtime === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                <a href="`+ streamData.streamingInfo.showtime.us.link + `">
-                    <div class="card-body d-grid">
-                        <button class="platformLinkButton btn btn-primary" type="button">Watch on Showtime</button>
-                    </div>
-                </a>
+                   
+                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.showtime.us.link + `">Watch on Showtime</button>
+                  
             `
         }
 
         if (!(typeof streamData.streamingInfo.apple === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                <a href="`+ streamData.streamingInfo.apple.us.link + `">
-                    <div class="card-body d-grid">
-                        <button class="platformLinkButton btn btn-primary" type="button">Watch on Apple</button>
-                    </div>
-                </a>
+                    
+                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.apple.us.link + `">Watch on Apple</button>
+                   
             `
         }
 
         if (!(typeof streamData.streamingInfo.paramount === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                <a href="`+ streamData.streamingInfo.paramount.us.link + `">
-                    <div class="card-body d-grid">
-                        <button class="platformLinkButton btn btn-primary" type="button">Watch on Paramount</button>
-                    </div>
-                </a>
+                    
+                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.paramount.us.link + `">Watch on Paramount</button>
+                  
             `
         }
 
         if (!(typeof streamData.streamingInfo.disney === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                <a href="`+ streamData.streamingInfo.disney.us.link + `">
-                    <div class="card-body d-grid">
-                        <button class="platformLinkButton btn btn-primary" type="button">Watch on Disney</button>
-                    </div>
-                </a>
+                  
+                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.disney.us.link + `">Watch on Disney</button>
+                    
             `
         }
 
         if (!(typeof streamData.streamingInfo.hbo === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                <a href="`+ streamData.streamingInfo.hbo.us.link + `">
-                    <div class="card-body d-grid">
-                        <button class="platformLinkButton btn btn-primary" type="button">Watch on HBO</button>
-                    </div>
-                </a>
+         
+                   
+                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.hbo.us.link + `">Watch on HBO</button>
+                  
+          
             `
         }
 
         if (!(typeof streamData.streamingInfo.peacock === 'undefined')) {
             serviceButton = serviceButton +
                 `
-                <a href="`+ streamData.streamingInfo.peacock.us.link + `">
-                    <div class="card-body d-grid">
-                        <button class="platformLinkButton btn btn-primary" type="button">Watch on Peacock</button>
-                    </div>
-                </a>
+           
+                        <button class="platformLinkButton btn btn-primary" type="button" href="`+ streamData.streamingInfo.peacock.us.link + `">Watch on Peacock</button>
+                  
             `
         }
 
-        return headerCard + serviceButton;
+        return headerCard + serviceButton + "</div> </div>";
 
     };
 
@@ -166,9 +152,11 @@ async function runSearch(userService, UserSearchText) {
         let cardHTML = "";
         for (i = 0; i < data.length; i++) {
             cardHTML = cardHTML + buildHTMLCard(data[i]);
+            console.log()
         };
 
         var card = document.createElement("div");
+       
         card.innerHTML = cardHTML;
         document.getElementById("start-cards").appendChild(card)
     })
