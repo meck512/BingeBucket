@@ -12,10 +12,13 @@ async function bucketFormHandler(event) {
         headers: { 'Content-Type': 'application/json' }
     })
 
-
+    //<div id="bucketList" class="card-body d-grid gap-2">
+    //{{!-- <button class="add2BucketButton btn btn-dark" type="button">Sweet Girl</button> --}}
+    var bucketItem = document.createElement("button");
+    bucketItem.innerText = event.target.dataset.originaltitle;
+    bucketItem.setAttribute("class", "add2BucketButton btn btn-dark")
+    document.getElementById("bucketList").appendChild(bucketItem)
 }
-
-
 var allBuckets = document.querySelectorAll('.bucketAddition')
 allBuckets.forEach(bucket => {
     bucket.addEventListener('click', bucketFormHandler)
